@@ -1,11 +1,15 @@
- agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-## Titulo de la Sesion 
+## Sesión: Consola y VIM
 
-### OBJETIVOS 
- - Lo que esperamos que el alumno aprenda al finalizar la sesion 
+### OBJETIVOS
+ - Conocer los comandos de administración de archivos de la terminal.
+ - Conocer los comandos del editor VIM así como permisos de archivos. 
 
-#### ORGANIZACION DE LA CLASE 
-- Tema que veran en el ejemplo
-	- [Ejemplo 01](Ejemplo-01)
-	- [Reto 01](Reto-01)
-
+### ORGANIZACIÓN DE CLASE
+- Comandos relacionados con el sistema de archivos
+    - [Ejemplo 1](Ejemplo-01)
+    - [Ejemplo 2](Ejemplo-02)
+    - [Reto 1](Reto-01)
+    - [Reto 2](Reto-02)
+- Comandos básicos de VIM así como permisos de archivos.
+    - [Ejemplo 3](Ejemplo-03)
+    - [Reto 3](Reto-03)
