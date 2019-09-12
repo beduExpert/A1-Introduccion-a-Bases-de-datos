@@ -1,4 +1,4 @@
-[`Fundamentos de Base de datos para Ciencia de Datos`](../Readme.md) > `Sesión 01`
+[`Fundamentos de Base de Datos`](../Readme.md) > `Sesión 05`
 ## Fundamentos de MongoDB.
 
 ### OBJETIVOS
@@ -6,7 +6,7 @@
 - Que el alumno comprenda y se familiarice con una base de datos no estructurada (NoSql)
 
 ### ORGANIZACION DE LA CLASE
-- Instalación de MongoDB
+- Instalación y ejecución de MongoDB
 	- [Ejemplo 01](Ejemplo-01)
 - Conexión a MongoDB desde un cliente
 	- [Ejemplo 02](Ejemplo-02)
