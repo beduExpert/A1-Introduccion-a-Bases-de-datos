@@ -1,11 +1,16 @@
- agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-## Titulo de la Sesion 
+## Formateo de archivos de datos desde consola Unix
 
-### OBJETIVOS 
- - Lo que esperamos que el alumno aprenda al finalizar la sesion 
+### OBJETIVOS
+ - Aprender a manipular las dimensiones de los archivos y hacer búsquedas y ediciones efectivas desde la consola.
+ - Crear un preprocesamiento automatizado desde la consola.
 
-#### ORGANIZACION DE LA CLASE 
-- Tema que veran en el ejemplo
-	- [Ejemplo 01](Ejemplo-01)
-	- [Reto 01](Reto-01)
-
+### ORGANIZACIÓN DE CLASE
+- Manipulando Dimensiones de Archivos 
+    - [Ejemplo 1](Ejemplo-01)
+    - [Reto 1](Reto-01)
+- Exploración de Archivos con grep
+    - [Ejemplo 2](Ejemplo-02)
+    - [Reto 2](Reto-02)
+- Procesamiento de Archivos con sed
+    - [Ejemplo 3](Ejemplo-03)
+    - [Reto 3](Reto-03)
