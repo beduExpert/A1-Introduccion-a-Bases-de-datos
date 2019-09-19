@@ -36,6 +36,12 @@
    1. Arrastra el archivo con extensión `.dmg` a la carpeta `Applications`, entonces espera a que termine el proceso de instalación.
    1. Inicia __Compass__ desde la carpeta de `Applications` y en caso de solicitar permisos, autoriza la ejecución de aplicaciones bajadas de Internet.
 
-Al final se deberá contar con __Compass__ ejecutando como se muestra en la siguiente imagen:
+1. Después de ejecutar __Compass__ se deberá contar con una ventana similar a la siguiente.
 
-![Compass corriendo](assets/compass-corriendo.png)
+   ![Compass corriendo](assets/compass-corriendo.png)
+
+   El valor tanto para __Hostname__ (localhost) y __Port__ (27017), que son los valores por omisión, son los correctos, así que se presiona el botón __CONNECT__ que hará que __Compass__ se conecte a nuestro servidor local de MongoDB:
+
+   ![Compass conectado a servidor local](assets/compass-conectado.png)
+   Que nos muestra una lista de las bases de datos existentes
+   
