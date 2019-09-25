@@ -1,11 +1,12 @@
- agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-## Titulo del Ejemplo 
+## Consultando nuestra BD
 
 ### OBJETIVO 
- - Lo que esperamos que el alumno aprenda 
+ - Hacer consultas básicas de nuestra BD
+ - Aprender a usar los filtros más utilizados
 
 #### REQUISITOS 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. MySQL Workbench
+2. BD MySQL
 
 #### DESARROLLO
 
