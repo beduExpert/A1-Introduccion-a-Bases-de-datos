@@ -14,7 +14,7 @@
 
    El filtro a aplicar sería el siguiente:
    ```json
-   {Edad_Usuario: {$nin ["30", "20", "18"] } }
+   {Edad_Usuario: {$nin: ["30", "20", "18"] } }
    ```
    El resultado será:
    ![Resultados de consulta](assets/documentos-en-viajes-01.png)
