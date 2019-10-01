@@ -14,13 +14,7 @@
 
    La primera etapa es para agregar todas nuestras variables auxiliares como son __Edad__ (Edad_Usuario en tipo entero), __FechaRetiro__ (Fecha_Retiro en tipo fecha) y __Fecha__ (La constante "15/01/2018" en tipo fecha)
    ```json
-   {
-     Edad: {$toInt: "$Edad_Usuario"},
-     FechaRetiro: {
-       $dateFromString: {dateFromString:"$Fecha_Retiro", format:"%d/%m/%Y"}
-     },
-     Fecha: {$dateFromString: {dateFromString:"15/01/2018", format:"%d/%m/%Y"}}
-   }
+   ???
    ```
    Para ver una lista de las operaciones disponibles [ver aquí](https://docs.mongodb.com/manual/reference/operator/aggregation/)
 
@@ -31,7 +25,7 @@
    ```json
    {
      $expr: {
-       $gte: ["$FechaRetiro", "$Fecha"]
+       ???
      }
    }
    ```
@@ -41,7 +35,7 @@
    {
      _id: null,
      Edad_Promedio: {
-       $avg: "$Edad"
+       ???
      }
    }
    ```
@@ -54,7 +48,7 @@
    La primera etapa es reducir los ciclistas al 3 de enero del 2018 usando __$match__:
    ```json
    {
-     Fecha_Retiro: /^03/
+     ???
    }
    ```
    ![Mujeres ciclistas etapa 1](assets/mujeres-ciclistas-e1.png)
@@ -64,11 +58,11 @@
    {
      _id: null,
      ciclistas: {
-       $sum: 1
+       ???
      },
      viajes: {
        $push: {
-         genero: "$Genero_Usuario"
+         ???
        }
      }
    }
@@ -90,8 +84,7 @@
    Para el __$project__:
    ```json
    {
-     genero: "$viajes.genero",
-     ciclistas: 1
+     ???
    }
    ```
    ![Mujeres ciclistas etapa 4](assets/mujeres-ciclistas-e4.png)
@@ -99,7 +92,7 @@
    Para el __$match__:
    ```json
    {
-     genero: "F"
+     ???
    }
    ```
    ![Mujeres ciclistas etapa 5](assets/mujeres-ciclistas-e5.png)
@@ -109,10 +102,10 @@
    {
      _id: null,
      ciclistas: {
-       $min: "$ciclistas"
+       ???
      },
      cifem: {
-       $sum: 1
+       ???
      }
    }
    ```
@@ -124,15 +117,7 @@
    ```json
    {
      porcentaje: {
-       $multiply: [
-          {
-            $divide: [
-              "$cifem",
-              "$ciclistas"
-            ]
-          },
-          100
-       ]
+       ???
      }
    }
    ```
