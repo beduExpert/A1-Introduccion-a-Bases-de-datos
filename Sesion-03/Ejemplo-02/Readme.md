@@ -16,7 +16,7 @@ SELECT *
 FROM trips
 WHERE Edad_Usuario > 60
 ```
-2. Selecciona todos los viajes empezados después de las 5 de la tarde hechas por una mujer
+2. Selecciona todos los viajes empezados después de las 5 de la tarde hechos por una mujer
 ```
 SELECT *
 FROM trips
