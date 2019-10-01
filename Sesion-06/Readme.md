@@ -14,11 +14,6 @@
 	- [Reto 02](Reto-02)
 - Calculando datos con MongoDB
 	- [Ejemplo 03](Ejemplo-03)
-	- [Reto 03](Reto-03)
-- Consultas y subconsultas
-  - [Ejemplo 04](Ejemplo-04)
-  - [Reto 04](Reto-04)
-- Relacionando colecciones
   - [Proyecto](Proyecto)
 
 ### POSTWORK
