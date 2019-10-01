@@ -1,4 +1,4 @@
-[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 06`](../Readme.md) > Reto-03
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 06`](../Readme.md) > Proyecto
 ## Calculando datos con MongoDB
 
 ### OBJETIVO
@@ -6,7 +6,7 @@
 
 ### REQUISITOS
 1. Repositorio actualizado
-1. Usar la carpeta de trabajo `Sesion-06/Reto-03`
+1. Usar la carpeta de trabajo `Sesion-06/Proyecto`
 1. Contar con la base de datos __Ecobici__ y la colección __Viajes__
 
 ### DESARROLLO
