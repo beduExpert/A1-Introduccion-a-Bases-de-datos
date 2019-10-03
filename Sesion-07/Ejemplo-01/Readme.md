@@ -3,7 +3,7 @@
 
 ### OBJETIVO
 - Que el alumno acceda a conjuntos de datos vía API
-- Que el alumno importe los datos obtenidos en una base de datos
+
 
 ### REQUISITOS
 1. Repositorio actualizado
@@ -26,4 +26,3 @@
    ![Guardando el resultado de la api](assets/guardando-conjuntodedatos.png)
 
    En este punto tenemos ya un conjunto de datos actualizados obtenidos desde una API.
-   
