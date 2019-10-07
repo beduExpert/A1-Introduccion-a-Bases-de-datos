@@ -12,7 +12,7 @@
 
 #### DESARROLLO
 
-Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo levantar un contenedor de docker a través de una imagen de docker `docker-compose.yml`, posteriormente ejecutar los comandos necesarios para conectarse y crear una tabla dentro de SQL.
+Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo levantar un contenedor de docker a través de una imagen de docker `docker-compose.yml`, posteriormente ejecutar los comandos necesarios dentro de `MySQL Workbench` para conectarse y crear una tabla dentro de SQL.
 
 1. Crear un directorio nombrado mi_bd y entrar en el.
 ```

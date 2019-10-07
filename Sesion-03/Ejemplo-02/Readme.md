@@ -10,7 +10,7 @@
 
 #### DESARROLLO
 
-Ya una vez completado nuestro `Ejemplo-01` y `Reto-01` sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal y así comprender los conceptos básicos de SQL, como: consultas básicas y filtrados.
+Ya una vez completado nuestro `Ejemplo-01` y `Reto-01` sigue las siguientes instrucciones para realizar el ejemplo dentro de `MySQL Workbench` y así comprender los conceptos básicos de SQL, como: consultas básicas y filtrados.
 
 
 1. Selecciona todos los viajes con usuarios con edad arriba de 30
