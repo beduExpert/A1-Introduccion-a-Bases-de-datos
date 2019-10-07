@@ -2,12 +2,15 @@
 
 ### OBJETIVO 
  - Conocer cómo interactuar con tu ambiente desde la consola
+ - Remover, descargar y visualizar un archivo dentro de la consola.
 
 #### REQUISITOS 
 1. Consola
 
 #### DESARROLLO
-Tomando como punto de partida del Ejemplo-01
+
+Ya una vez completado nuestro ´Ejemplo-01´ sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal y así entender cómo remover, descargar y visualizar un archivo dentro de tu terminal.
+
 1. Posiciónate dentro del directorio archivos1
 ```
 $cd archivos1
