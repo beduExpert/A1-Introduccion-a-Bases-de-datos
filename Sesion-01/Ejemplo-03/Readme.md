@@ -9,7 +9,7 @@
 
 #### DESARROLLO
 
-Después de completar el ´Ejemplo-02´y el ´Reto 02´ sigue las instrucciones para realizar este ejemplo dentro de tu terminal.
+Después de completar el ´Ejemplo-02´ y el ´Reto 02´ sigue las instrucciones para realizar este ejemplo dentro de tu terminal.
 
 > **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon, son un comando que deberás ejecutar dentro de tu terminal.  
 
