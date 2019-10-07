@@ -1,11 +1,18 @@
- agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-## Titulo del Ejemplo 
+## Consultas dentro de consultas
 
 ### OBJETIVO 
- - Lo que esperamos que el alumno aprenda 
+ - Combinar diferentes resultados de consultas
 
 #### REQUISITOS 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. MySQL Workbench
+2. BD MySQL
 
 #### DESARROLLO
 
+Tomando como guía el `Ejemplo-02` sigue las instrucciones y realiza el Reto dentro de `MySQL Workbench`.
+
+> **Recuerda**: Inicializar el contenedor de docker donde estaremos trabajando.  
+
+1. ¿Qué porcentaje de ciclistas fueron mujeres el 3 de Enero?
+2. ¿Qué porcentaje de ciclistas salen a las 5 de la mañana?
+3. ¿En la segunda mitad de Enero, cuantos viajes se hicieron y cuál fue la edad promedio de los ciclistas?
