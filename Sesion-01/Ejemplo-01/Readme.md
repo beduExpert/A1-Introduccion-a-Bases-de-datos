@@ -9,7 +9,7 @@
 
 #### DESARROLLO 
  
-Sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo crear, mover y copiar, archivos y carpetas.
+Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo crear, mover y copiar, archivos y carpetas.
 
 > **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon es un comando que deberás ejecutar dentro de tu terminal.  
 
