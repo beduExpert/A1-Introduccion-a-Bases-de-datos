@@ -12,14 +12,14 @@
 
 #### DESARROLLO
 
-Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo levantar un contenedor de docker a través de una imagen de docker `docker-compose.yml`, posteriormente ejecutar los comandos necesarios para conectarse y crear una tabla dentro de SQL.
+Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo levantar un contenedor de docker a través de una imagen de docker `docker-compose.yml`, posteriormente ejecutar los comandos necesarios dentro de `MySQL Workbench` para conectarse y crear una tabla dentro de SQL.
 
-1. Crear un directorio nombrado mi_bd y entrar en el.
+1. Crea un directorio nombrado mi_bd y entra en el.
 ```
 $mkdir mi_bd
 $cd mi_bd
 ```
-2. Crear un archivo con el siguiente contenido, guardarlo como docker-compose.yml
+2. Crea un archivo con el siguiente contenido y guardalo como docker-compose.yml
 ```
 version: '3'
 services:
@@ -31,16 +31,16 @@ services:
     ports:
       - "3308:3306"
 ```
-3. Correr nuestro contenedor con el siguiente comando
+3. Corre nuestro contenedor con el siguiente comando
 ```
 docker-compose up -d
 ```
-4. Revisar nuestros contenedores
+4. Revisa nuestros contenedores
 ```
 docker-compose ps
 ```
-5. Conectarse a la BD con el cliente. El usuario por defecto es root, la contraseña es holamundo, el puerto es 3308, el host es localhost y el schema es app_prueba
-6. Crear la siguiente tabla corriendo el código en nuestro cliente.
+5. Conectate a la Base de datos con el cliente `MySQL Workbench`. El usuario para ingresar por defecto es root, la contraseña es `holamundo`, el puerto es `3308`, el host es `localhost` y el schema es `app_prueba`
+6. Crea la siguiente tabla corriendo el código en nuestro cliente `MySQL Workbench`.
 ```
 CREATE TABLE IF NOT EXISTS trips (
     trip_id INT AUTO_INCREMENT,
