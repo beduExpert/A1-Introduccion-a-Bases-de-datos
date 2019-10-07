@@ -9,7 +9,7 @@
 1. Consola
 
 ### DESARROLLO 
-A partir de la estructura generada en el reto pasado, debes hacer los cambios necesarios para llegar a la siguiente estructura, claro utilizando sólo la consola.
+A partir de la estructura generada en el reto pasado, debes hacer los cambios necesarios para llegar a la siguiente estructura, claro, utilizando sólo la consola.
 ```
 mi_proyecto
     └── datos
