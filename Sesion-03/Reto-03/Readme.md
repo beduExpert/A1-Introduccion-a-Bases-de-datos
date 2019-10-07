@@ -1,11 +1,18 @@
- agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-## Titulo del Ejemplo 
+## Filtrado Avanzado
 
 ### OBJETIVO 
- - Lo que esperamos que el alumno aprenda 
+ - Hacer uso de filtros como NOT, IN y LIKE
 
 #### REQUISITOS 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. MySQL Workbench
+2. BD MySQL
 
 #### DESARROLLO
 
+Tomando como guía el `Ejemplo-03` sigue las instrucciones y realiza el Reto dentro de tu terminal.
+
+1. Selecciona todos los viajes que tengan usuarios con edades de 10, 20 y 30
+
+2. Selecciona todos los viajes usuarios con edades diferentes a 50, 30 y 20 y que han usado las bicicletas 10643, 9648 y 9929
+
+3. Consulta el genero de los usuarios que viajaron a las 7 horas con x minutos y que son menores de edad. 
