@@ -7,6 +7,9 @@
 1. Consola 
 
 #### DESARROLLO
+
+Tomando como guía el ´Ejemplo-01´ sigue las siguientes instrucciones y realiza el Reto dentro de tu terminal.
+
 1. Descarga el siguiente archivo https://raw.githubusercontent.com/veekun/pokedex/master/pokedex/data/csv/pokemon.csv
 2. Muestra las primeras 20 líneas del csv
 3. Muestra las últimas 5 líneas del csv

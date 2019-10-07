@@ -7,6 +7,11 @@
 1. Consola
 
 #### DESARROLLO
+
+Ya una vez completado nuestro ´Ejemplo-02´ sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal y así entender las expresiones regulares y cómo nos ayudaran para reemplazar texto, insertar o borrar sobre un archivo.
+
+> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon es un comando que deberás ejecutar dentro de tu terminal.  
+
 1. Descarga el siguiente archivo https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv
 ```
 $wget -O iris.csv https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv

@@ -11,6 +11,8 @@
 
 Ya una vez completado nuestro ´Ejemplo-02´ sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal.
 
+> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon es un comando que deberás ejecutar dentro de tu terminal.  
+
 1. Abre vim inicializando un archivo con nombre mi_script.sh
 ```
 $vi mi_script.sh
