@@ -11,7 +11,7 @@
  
 Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo crear, mover y copiar, archivos y carpetas.
 
-> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon es un comando que deberás ejecutar dentro de tu terminal.  
+> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon son un comando que deberás ejecutar dentro de tu terminal.  
 
 1. Revisa dónde estás posicionado
 ```
