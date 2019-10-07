@@ -9,7 +9,7 @@
 
 #### DESARROLLO
 
-Ya una vez completado nuestro ´Ejemplo-01´ sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así entender cómo remover, descargar y visualizar un archivo dentro de tu terminal.
+Después de completar el ´Ejemplo-01´ sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así entender cómo remover, descargar y visualizar un archivo dentro de tu terminal.
 
 > **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon, es un comando que deberás ejecutar dentro de tu terminal.  
 
