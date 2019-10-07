@@ -14,4 +14,4 @@ Tomando como guía el ´Ejemplo-03´ sigue las instrucciones y realiza el Reto d
 2. Sustituye Harris por Ramirez
 3. Susituye el segundo 0 por un 999
 4. Sustituyendo todos los ceros por un 'none'
-5. Cambia todos los William por Brayan y muestra sólo las líneas afectadas
+5. Cambia todos los William por Brian y muestra sólo las líneas afectadas
