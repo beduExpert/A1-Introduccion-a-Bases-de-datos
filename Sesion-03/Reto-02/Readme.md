@@ -1,11 +1,19 @@
- agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]  
-## Titulo del Ejemplo 
+## Consultando nuestra BD
 
 ### OBJETIVO 
- - Lo que esperamos que el alumno aprenda 
+ - Hacer consultas básicas de nuestra BD
+ - Aprender a usar los filtros más utilizados
 
 #### REQUISITOS 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. MySQL Workbench
+2. BD MySQL
 
 #### DESARROLLO
 
+Tomando como guía el `Ejemplo-02` sigue las instrucciones y realiza el Reto dentro de tu terminal.
+
+1. Selecciona todos los viajes con usuarios con edad menor a 20 años
+
+2. Selecciona todos los viajes empezados antes de las 2 de la tarde hechos por un hombre.
+
+3. Regresame los identificadores de las estaciones retiradas después de las 8 de la mañana y antes de las 5 de la tarde.
