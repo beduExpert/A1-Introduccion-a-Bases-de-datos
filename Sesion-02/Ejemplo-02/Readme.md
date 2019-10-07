@@ -22,7 +22,7 @@ $grep 'Computer' computer.csv
 $grep -i 'Computer' computer.csv
 
 ````
-3. Cuenta cuantas líneas coninciden con tu búsqueda
+3. Cuenta cuántas líneas coninciden con tu búsqueda
 ````
 $grep -c 'Computer' computer.csv
 ````
