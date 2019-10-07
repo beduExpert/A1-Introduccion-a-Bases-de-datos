@@ -9,7 +9,7 @@
 
 #### DESARROLLO
 
-Ya una vez completado nuestro `Ejemplo-02` y `Reto-02` sigue las instrucciones para realizar el ejemplo dentro de `MySQL Workbench` y analizar cómo puedes combinar diferentes tipos de resultados en SQL.
+Ya una vez completado nuestro `Ejemplo-01` y `Reto-01` sigue las instrucciones para realizar el ejemplo dentro de `MySQL Workbench` y analizar cómo puedes combinar diferentes tipos de resultados en SQL.
 
 > **Recuerda**: Inicializar el contenedor de docker donde estaremos trabajando.  
 

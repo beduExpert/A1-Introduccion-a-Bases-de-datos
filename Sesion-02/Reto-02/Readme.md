@@ -8,9 +8,9 @@
 
 ### DESARROLLO
 
-Tomando como guía el ´Ejemplo-02´ sigue las siguientes instrucciones y realiza el Reto dentro de tu terminal.
+Tomando como guía el ´Ejemplo-02´ sigue las instrucciones y realiza el Reto dentro de tu terminal.
 
-1. Descargar el siguiente archivo https://raw.githubusercontent.com/cienciadedatos/datos-de-miercoles/master/README.md
+1. Descargar el archivo https://raw.githubusercontent.com/cienciadedatos/datos-de-miercoles/master/README.md
 2. Buscar qué líneas contienen la palabra datos
 3. ¿Cuántas líneas contienen R?
 4. Busca menciones de 'datos' sin importar mayúsculas o minúsculas

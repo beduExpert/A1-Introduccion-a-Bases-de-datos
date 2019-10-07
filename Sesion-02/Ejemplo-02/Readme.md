@@ -8,9 +8,9 @@
 
 #### DESARROLLO
 
-Ya una vez completado nuestro ´Ejemplo-01´ sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal y así entender las expresiones regulares y cómo nos ayudaran para hacer búsquedas sobre un archivo.
+Después de completar el ´Ejemplo-01´ y el ´Reto- 01´sigue las instrucciones para realizar el siguiente ejemplo dentro de tu terminal y así entender las expresiones regulares y cómo nos ayudaran para hacer búsquedas sobre un archivo.
 
-> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon es un comando que deberás ejecutar dentro de tu terminal.  
+> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon, son un comando que deberás ejecutar dentro de tu terminal.  
 
 1. Descarga el siguiente archivo https://raw.githubusercontent.com/jonas/dgrep/master/src/test/resources/wikipedia/prog/computer-science.txt
 ```
@@ -22,7 +22,7 @@ $grep 'Computer' computer.csv
 $grep -i 'Computer' computer.csv
 
 ````
-3. Cuenta cuantas líneas coninciden con tu búsqueda
+3. Cuenta cuántas líneas coninciden con tu búsqueda
 ````
 $grep -c 'Computer' computer.csv
 ````

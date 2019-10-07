@@ -8,10 +8,10 @@
 
 #### DESARROLLO
 
-Sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo seleccionar columnas y renglones de archivos desde la consola, además de usar múltiples comandos.
+Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo seleccionar columnas y renglones de archivos desde la consola, además de usar múltiples comandos.
 
 
-> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon es un comando que deberás ejecutar dentro de tu terminal.  
+> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon, son un comando que deberás ejecutar dentro de tu terminal.  
 
 1. Descarga el siguiente archivo https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv
 ```
@@ -39,7 +39,11 @@ $cut -d ',' -f 5 iris.csv | head > primeras_especies.txt
 ```
 $echo '"rosa"' >> primeras_especies.txt
 ```
+<<<<<<< HEAD
 6. Cuenta cuantas líneas contiene tu archivo
+=======
+6. Cuenta cuántas líneas contiene tu archivo
+>>>>>>> b24a24dc2a8d9c49b43cf50124b317e51b549dcb
 ```
 $wc iris.csv
 ```
