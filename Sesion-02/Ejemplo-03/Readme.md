@@ -8,7 +8,7 @@
 
 #### DESARROLLO
 
-Después de completar el ´Ejemplo-02´ y el ´Reto-02´sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así entender las expresiones regulares y cómo nos ayudaran para reemplazar texto, insertar o borrar sobre un archivo.
+Después de completar el ´Ejemplo-02´ y el ´Reto-02´sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así entender las expresiones regulares y cómo nos ayudarán para reemplazar texto, insertar o borrar sobre un archivo.
 
 > **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon, son un comando que deberás ejecutar dentro de tu terminal.  
 
