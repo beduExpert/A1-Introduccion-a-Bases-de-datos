@@ -10,7 +10,7 @@
 
 #### DESARROLLO
 
-Tomando como guía el `Ejemplo-02` sigue las instrucciones y realiza el Reto dentro de tu terminal.
+Tomando como guía el `Ejemplo-02` sigue las instrucciones y realiza el Reto dentro de `MySQL Workbench`.
 
 1. Selecciona todos los viajes con usuarios con edad menor a 20 años
 

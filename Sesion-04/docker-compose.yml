@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mi_entorno_mysql:
+    image: mysql:8.0.17
+    environment:
+      MYSQL_ROOT_PASSWORD: holamundo
+      MYSQL_DATABASE: app_prueba
+    ports:
+      - "3308:3306"

@@ -9,7 +9,7 @@
 
 #### DESARROLLO
 
-Ya una vez completado nuestro `Ejemplo-02` y `Reto-02` sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal y así comprender sobre los tipos de filtros dentro SQL.
+Ya una vez completado nuestro `Ejemplo-02` y `Reto-02` sigue las siguientes instrucciones para realizar el ejemplo dentro de `MySQL Workbench` y así comprender sobre los tipos de filtros dentro SQL.
 
 1. Selecciona todos los viajes que no tengan usuarios con edades de 35, 20 y 18
 ```
