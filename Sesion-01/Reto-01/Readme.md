@@ -7,7 +7,7 @@
 1. Consola
 
 ### DESARROLLO
-Cuando comenzamos un nuevo proyecto hay una estructura básica que seguimos. Dependiendo del tipo de proyecto cambiará la estructura pero para este reto debes replicar la siguiente estructura utilizando sólo la consola.
+Cuando comenzamos un nuevo proyecto hay una estructura básica que seguimos. Dependiendo del tipo de proyecto, cambiará la estructura. Para este reto debes replicar la siguiente estructura utilizando sólo la consola.
 ```
 mi_proyecto
     └── README.md
