@@ -8,7 +8,7 @@
 
 #### DESARROLLO
 
-Tomando como guía el ´Ejemplo-03´ sigue las siguientes instrucciones y realiza el Reto dentro de tu terminal.
+Tomando como guía el ´Ejemplo-03´ sigue las instrucciones y realiza el Reto dentro de tu terminal.
 
 1. Descarga el siguiente archivo https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv
 2. Substituye Harris por Ramirez
