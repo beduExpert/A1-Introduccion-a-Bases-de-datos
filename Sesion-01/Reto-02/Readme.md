@@ -1,7 +1,9 @@
 ## Manejo Básico del Sistema de Archivos
 
 ### OBJETIVO 
- - Conocer cómo interactuar con tu ambiente desde la consola
+ - Conocer cómo interactuar con tu ambiente desde la consola.
+ - Realizar cambios de estructura de carpetas dentro de la terminal.
+ - Realizar descargas de archivos a través de la terminal.
 
 #### REQUISITOS 
 1. Consola
@@ -18,27 +20,8 @@ mi_proyecto
         └── README.md
 
 ```
-#### SOLUCIÓN
-Tomando como punto de partida del Reto-01
-1. Entrar a la carpeta datos
-```
-$cd datos
-```
-2. Descarga datos con nombre de archivo pokemon.csv
-```
-$wget -O pokemon.csv https://raw.githubusercontent.com/veekun/pokedex/master/pokedex/data/csv/pokemon.csv
-
-```
-3. Retrocede un nivel y mueve el README.md dentro del directorio codigo
-```
-$cd ..
-$mv README.md codigo
-```
-4. Posiciónate dentro del directorio codigo
-```
-$cd codigo
-```
-5. Elimina la carpeta experimentacion y sus contenidos
-````
-$rm -R experimentacion
-````
+**Recuerda**: Los archivos son aquellos que tienen terminación.  
+**Notas**: 
+* Este Reto tiene una duración de 20 min.
+* La fuente de los datos es la siguiente
+    * pokemon.csv https://raw.githubusercontent.com/veekun/pokedex/master/pokedex/data/csv/pokemon.csv

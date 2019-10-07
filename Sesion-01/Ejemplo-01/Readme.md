@@ -1,12 +1,18 @@
 ## Manejo Básico del Sistema de Archivos
 
 ### OBJETIVO 
- - Conocer cómo interactuar con tu ambiente desde la consola
+ - Conocer cómo interactuar con tu ambiente desde la consola.
+ - Crear, mover y copiar, archivos y carpetas.
 
 #### REQUISITOS 
 1. Consola
 
-#### DESARROLLO
+#### DESARROLLO 
+ 
+Sigue las siguientes instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo crear, mover y copiar, archivos y carpetas.
+
+> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon es un comando que deberás ejecutar dentro de tu terminal.  
+
 1. Revisa dónde estás posicionado
 ```
 $pwd
