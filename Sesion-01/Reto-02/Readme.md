@@ -1,6 +1,6 @@
 ## Manejo Básico del Sistema de Archivos
 
-### OBJETIVO 
+### OBJETIVOS 
  - Conocer cómo interactuar con tu ambiente desde la consola.
  - Realizar cambios de estructura de carpetas dentro de la terminal.
  - Realizar descargas de archivos a través de la terminal.
