@@ -1,32 +1,32 @@
 ## Procesamiento de Archivos con sed
 
 ### OBJETIVO 
- - Aprovechar el poder de las expresiones regulares para reemplazar texto, insertar o borrar sobre un archivo.
+ - Utilizar el poder de las expresiones regulares para reemplazar texto, insertar o borrar sobre un archivo.
 
 #### REQUISITOS 
 1. Consola
 
 #### DESARROLLO
 
-Después de completar el ´Ejemplo-02´ y el ´Reto-02´sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así entender las expresiones regulares y cómo nos ayudarán para reemplazar texto, insertar o borrar sobre un archivo.
+Después de completar el ´Ejemplo-02´ y el ´Reto-02´sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así entender las expresiones regulares y cómo te ayudarán para reemplazar texto, insertar o borrar sobre un archivo.
 
-> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon, son un comando que deberás ejecutar dentro de tu terminal.  
+> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglón, son un comando que deberás ejecutar dentro de tu terminal.  
 
 1. Descarga el siguiente archivo https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv
 ```
 $wget -O iris.csv https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv
 ```
-2. Substituyendo cadenas
+2. Sustituyendo cadenas
 ````
 $sed 's/Setosa/Martosa/' iris.csv
 $sed 's/5/500/' iris.csv
 $sed 's/5/500/' iris.csv | head
 ````
-3. Subsituyendo la ocurrencia n-esima de un patrón en una línea
+3. Susituyendo la ocurrencia n-esima de un patrón en una línea
 ````
 $sed 's/5/500/2' iris.csv | head
 ````
-4. Substituyendo todas las ocurrencias del patrón en un línea
+4. Sustituyendo todas las ocurrencias del patrón en un línea
 ```
 $sed 's/5/500/g' iris.csv | head
 ```
