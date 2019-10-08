@@ -1,6 +1,6 @@
 ## Configurando MySQL y nuestro cliente
 
-### OBJETIVO 
+### OBJETIVOS 
  - Levantar un servidor básico de MySQL
  - Conectarnos a nuestra BD a través de un cliente gráfico 
  - Cargar una tabla a nuestra BD
@@ -12,14 +12,14 @@
 
 #### DESARROLLO
 
-Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo levantar un contenedor de docker a través de una imagen de docker `docker-compose.yml`, posteriormente ejecutar los comandos necesarios dentro de `MySQL Workbench` para conectarse y crear una tabla dentro de SQL.
+Sigue las instrucciones para realizar el ejemplo dentro de tu terminal y así comprender de mejor manera cómo levantar un contenedor de docker a través de una imagen de docker `docker-compose.yml`, posteriormente ejecuta los comandos necesarios dentro de `MySQL Workbench` para conectarse y crear una tabla dentro de SQL.
 
 1. Crea un directorio nombrado mi_bd y entra en el.
 ```
 $mkdir mi_bd
 $cd mi_bd
 ```
-2. Crea un archivo con el siguiente contenido y guardalo como docker-compose.yml
+2. Crea un archivo con el siguiente contenido y guárdalo como docker-compose.yml
 ```
 version: '3'
 services:
@@ -56,4 +56,4 @@ CREATE TABLE IF NOT EXISTS trips (
     PRIMARY KEY (trip_id)
 )  ENGINE=INNODB;
 ```
-7. Ingresar a la opción cargar datos desde archivo.
+7. Ingresa a la opción cargar datos desde archivo.
