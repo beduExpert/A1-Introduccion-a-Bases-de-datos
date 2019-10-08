@@ -26,11 +26,11 @@ $grep -i 'Computer' computer.csv
 ````
 $grep -c 'Computer' computer.csv
 ````
-4. Hacer búsquedas por palabras completas
+4. Hacez búsquedas por palabras completas
 ```
 $grep -w 'Computer' computer.csv
 ```
-5. Sólo muestra el patrón encontrado
+5. Muestra sólo el patrón encontrado
 ```
 $grep -i -o 'Computer' computer.csv
 ```
@@ -38,7 +38,7 @@ $grep -i -o 'Computer' computer.csv
 ```
 $grep -n 'Computer' computer.csv
 ```
-7. Muestra sólo el número de las líneas en donde coincide el patrón.
+7. Muestra sólo el número de las líneas en dónde coincide el patrón.
 ```
 $grep -n 'Computer' computer.csv | cut -d ":" -f 1
 ```
