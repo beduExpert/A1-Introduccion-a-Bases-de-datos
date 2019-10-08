@@ -21,7 +21,7 @@ $vi mi_script.sh
 ````
 echo Iniciando mi_script.sh
 ````
-3. Presionando esc entras en modo comando. Guarda y salirte de vim.
+3. Presionando esc entras en modo comando. Guarda y salte de vim.
 ````
 :wq [Enter]
 ````
