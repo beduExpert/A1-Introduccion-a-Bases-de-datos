@@ -11,7 +11,7 @@
 
 Tomando como guía el ´Ejemplo-03´ sigue las siguientes instrucciones y realiza el Reto dentro de tu terminal.
 
-Crea un script que automáticamente crea la siguiente estructura de proyecto
+Crea un script que automáticamente cree la siguiente estructura de proyecto
 ```
 mi_analisis
     └── README.md
