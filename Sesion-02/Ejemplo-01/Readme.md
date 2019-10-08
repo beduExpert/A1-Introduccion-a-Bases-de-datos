@@ -39,11 +39,7 @@ $cut -d ',' -f 5 iris.csv | head > primeras_especies.txt
 ```
 $echo '"rosa"' >> primeras_especies.txt
 ```
-<<<<<<< HEAD
-6. Cuenta cuantas líneas contiene tu archivo
-=======
 6. Cuenta cuántas líneas contiene tu archivo
->>>>>>> b24a24dc2a8d9c49b43cf50124b317e51b549dcb
 ```
 $wc iris.csv
 ```
