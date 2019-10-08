@@ -21,11 +21,11 @@ $vi mi_script.sh
 ````
 echo Iniciando mi_script.sh
 ````
-3. Presionando esc entramos en modo comando. Guardar y salirte de vim.
+3. Presionando esc entras en modo comando. Guarda y salirte de vim.
 ````
 :wq [Enter]
 ````
-4. Muestra los contenidos de nuestro script para confirmar nuestra escritura.
+4. Muestra los contenidos de tu script para confirmar tu escritura.
 ```
 $cat mi_script.sh
 ```
@@ -47,7 +47,7 @@ echo Descargando información
 wget -O datos.csv https://raw.githubusercontent.com/ChitturiPadma/datasets/master/uber.csv
 echo Finalizando ejecución
 ```
-7. Darle permiso de ejecución al script y corre el script
+7. Dale permiso de ejecución al script y corre el script
 ```
 $chmod +x mi_script.sh
 $./mi_script.sh
