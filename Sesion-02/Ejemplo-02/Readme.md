@@ -1,7 +1,7 @@
 ## Exploración de Archivos con grep
 
 ### OBJETIVO 
- - Conocer y aprovechar el poder de las expresiones regulares para hacer búsquedas sobre un archivo.
+ - Conocer y utilizar el poder de las expresiones regulares para hacer búsquedas sobre un archivo.
 
 #### REQUISITOS 
 1. Consola
@@ -10,13 +10,13 @@
 
 Después de completar el ´Ejemplo-01´ y el ´Reto- 01´sigue las instrucciones para realizar el siguiente ejemplo dentro de tu terminal y así entender las expresiones regulares y cómo nos ayudaran para hacer búsquedas sobre un archivo.
 
-> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglon, son un comando que deberás ejecutar dentro de tu terminal.  
+> **Recuerda**: Todas la instrucciones que aparecen con el signo ´$´ al principio del reglón, son un comando que deberás ejecutar dentro de tu terminal.  
 
 1. Descarga el siguiente archivo https://raw.githubusercontent.com/jonas/dgrep/master/src/test/resources/wikipedia/prog/computer-science.txt
 ```
 $wget -O computer.csv https://raw.githubusercontent.com/jonas/dgrep/master/src/test/resources/wikipedia/prog/computer-science.txt
 ```
-2. Busca que líneas contienen la palabra 'Computer' en computer.csv
+2. Busca qué líneas contienen la palabra 'Computer' en computer.csv
 ````
 $grep 'Computer' computer.csv
 $grep -i 'Computer' computer.csv
@@ -34,7 +34,7 @@ $grep -w 'Computer' computer.csv
 ```
 $grep -i -o 'Computer' computer.csv
 ```
-6. Muestra además de la línea que coincide, también el número de línea
+6. Muestra, además de la línea que coincide, el número de línea
 ```
 $grep -n 'Computer' computer.csv
 ```
