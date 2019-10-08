@@ -16,17 +16,17 @@ Después de completar el ´Ejemplo-02´ y el ´Reto-02´sigue las instrucciones 
 ```
 $wget -O iris.csv https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv
 ```
-2. Sustituyendo cadenas
+2. Sustituye cadenas
 ````
 $sed 's/Setosa/Martosa/' iris.csv
 $sed 's/5/500/' iris.csv
 $sed 's/5/500/' iris.csv | head
 ````
-3. Susituyendo la ocurrencia n-esima de un patrón en una línea
+3. Susituye la ocurrencia n-esima de un patrón en una línea
 ````
 $sed 's/5/500/2' iris.csv | head
 ````
-4. Sustituyendo todas las ocurrencias del patrón en un línea
+4. Sustituye todas las ocurrencias del patrón en un línea
 ```
 $sed 's/5/500/g' iris.csv | head
 ```
