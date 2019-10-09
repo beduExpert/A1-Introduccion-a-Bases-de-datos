@@ -63,3 +63,5 @@
 
    ![Datos de Companet importados](assets/datos-compranet-importados.png)
    Se puede observar que se tienen 100 documentos importados.
+
+__Nota:__ La carpeta `json.por-si-acaso/` contiene el archivo ya modificado para ser importado desde MongoDB y puede ser usado en caso de que el alumno no logre ajustar el archivos correctamente.
