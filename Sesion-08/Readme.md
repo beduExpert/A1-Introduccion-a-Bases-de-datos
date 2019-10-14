@@ -12,10 +12,10 @@
 - Filtrado avanzado a bases de datos no relacionales en la nube
 	- [Ejemplo 02](Ejemplo-02)
 	- [Reto 02](Reto-02)
-- Calculando datos con MongoDB
+- Calculando datos con bases de datos no relacionales en la nube
 	- [Ejemplo 03](Ejemplo-03)
     - [Proyecto](Proyecto)
 
 ### POSTWORK
- - Consultas no relacionales con MongoDB aplicado a tú Proyecto.
+ - Consultas no relacionales en la nube aplicado a tú Proyecto.
    - [Ver lineamientos](Postwork)
