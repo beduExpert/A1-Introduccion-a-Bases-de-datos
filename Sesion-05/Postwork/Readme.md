@@ -1,5 +1,5 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Postwork
-## Bases de datos no relacionales con MongoDB aplicado a tú Proyecto.
+## Bases de datos no relacionales con MongoDB aplicado a tu Proyecto.
 
 ### OBJETIVO
 - Que el alumno aplique los conocimientos de esta sesión en su proyecto personal.
