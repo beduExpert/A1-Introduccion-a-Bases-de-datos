@@ -2,14 +2,14 @@
 ## Bases de datos no relacionales con MongoDB aplicado a tu Proyecto.
 
 ### OBJETIVO
-- Que el alumno aplique los conocimientos de esta sesión en su proyecto personal.
+- Aplicar los conocimientos de esta sesión en ejemplos personales. (Conjuntos de datos del proyecto que desees analizar)
 
 ### REQUISITOS
 1. Repositorio actualizado
 1. Usar la carpeta de trabajo `Sesion-05/Postwork`
 1. __MongoDB__ instalado y corriendo
 1. __Compass__ instalado, corriendo y conectado al servidor local de MongoDB
-1. Conjuntos de datos del proyecto que deses analizar
+1. Conjuntos de datos del proyecto que desees analizar
 
 ### DESARROLLO
 1. Lo primero es que crear y nombrar la base de datos que usarás para tu proyecto haciendo uso de __Compass__.
