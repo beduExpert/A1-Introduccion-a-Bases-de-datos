@@ -14,24 +14,24 @@
 1. Abrir la terminal (Linux y Mac) o Git Bash (Windows)
 
 1. Obtener la ruta (o path) de la carpeta actual, escribe el comando `pwd` y presiona ENTER:
-  ```console
-  $ pwd
-  /home/rctorr
-  ```
-  Todo lo que aparece desde el inicio de la línea hasta el signo de $ es lo que se conoce como la señal o prompt del sistema operativo, el símbolo de $ no lo tienes que teclear, sólo indica que lo que tu vayas a teclear será después de ese símbolo.
-  El comando en este caso es `pwd` y para ejecutarlo has presionado la tecla __ENTER__.
-  El resultado se muestra en la línea siguiente y es `/home/rctorr`.
+   ```console
+   $ pwd
+   /home/rctorr
+   ```
+   Todo lo que aparece desde el inicio de la línea hasta el signo de $ es lo que se conoce como la señal o prompt del sistema operativo, el símbolo de $ no lo tienes que teclear, sólo indica que lo que tu vayas a teclear será después de ese símbolo.
+   El comando en este caso es `pwd` y para ejecutarlo has presionado la tecla __ENTER__.
+   El resultado se muestra en la línea siguiente y es `/home/rctorr`.
 
-  El comando `pwd` te permite siempre conocer la carpeta de trabajo en la que te encuentras.
+   El comando `pwd` te permite siempre conocer la carpeta de trabajo en la que te encuentras.
 
 1. Obtener la lista de elementos de la carpeta actual, escribe el comando `ls` y presiona ENTER:
-  ```console
-  $ ls
-   bin                           Documentos      Música         Escritorio      Sesion08                      Notas.md        Vídeos
-   DesarrolloPython              Imágenes        Plantillas     miniconda3      Público                       Descargas       mi_proyecto     repos
-  $
-  ```
-  En Linux y MacOS el resultado es como el mostrado, en Windows la lista podrá aparecer en una sola columna.
+   ```console
+   $ ls
+    bin                           Documentos      Música         Escritorio      Sesion08                      Notas.md        Vídeos
+    DesarrolloPython              Imágenes        Plantillas     miniconda3      Público                       Descargas       mi_proyecto     repos
+   $
+   ```
+   En Linux y MacOS el resultado es como el mostrado, en Windows la lista podrá aparecer en una sola columna.
 
 1. El comando `ls` se le pueden agregar opciones para que proporcione más información de los elementos, así que una alternativa es usar la opción `-l` que mostrará permisos, usuario y grupo propietarios, tamaño, fecha y nombre.
   ```console
