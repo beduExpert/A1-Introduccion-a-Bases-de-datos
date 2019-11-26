@@ -117,6 +117,6 @@
    $ rm -r CursoBD
    $
    ```
-   Al final también se ha borrado la carpeta CursoBD
+   Al final también se ha borrado la carpeta `CursoBD`
 
 __Misión cumplida__
