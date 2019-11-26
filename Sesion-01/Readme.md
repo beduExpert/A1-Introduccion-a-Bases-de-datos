@@ -7,10 +7,11 @@
 - ???
 
 ### ORGANIZACIÓN DE CLASE
-- Comandos para manipular carpetas y archivos
+- Comandos para manipular carpetas
     - [Ejemplo 1](Ejemplo-01)
-    - [Ejemplo 2](Ejemplo-02)
     - [Reto 1](Reto-01)
+- Comandos para manipular archivos
+    - [Ejemplo 2](Ejemplo-02)
     - [Reto 2](Reto-02)
 - Comandos básicos de VIM así como permisos de archivos.
     - [Ejemplo 3](Ejemplo-03)
