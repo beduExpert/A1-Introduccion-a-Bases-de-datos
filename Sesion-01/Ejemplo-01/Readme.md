@@ -3,8 +3,8 @@
 
 ### OBJETIVO
 - Conocer la terminal
-- Conocer los comandos para manipular carpetas
-- Conocer los comandos para manipular archivos
+- Conocer y ejecutar comandos para manipular carpetas
+- Adquirir la habilidad en el uso de la terminal
 
 #### REQUISITOS
 1. Git Bash instalado para equipos con Windows
