@@ -8,7 +8,7 @@
 
 ### ORGANIZACIÓN DE MÓDULO
 
-- [Sesión 1: Introducción a la Consola](Sesion-01/):
+- [Sesión 1: Introducción a la terminal de comandos](Sesion-01/):
 - [Sesión 2: Formateo de archivos de datos desde consola unix](Sesion-02/):
 - [Sesión 3: Fundamentos de MySQL](Sesion-03/):
 - [Sesión 4: Consultas de datos relacionales](Sesion-04/):
