@@ -1,14 +1,14 @@
 ## Módulo: Fundamentos de Base de datos para Ciencia de Datos 
 
 ### OBJETIVOS
-- Procesar archivos de datos desde la terminal unix
+- Conocer las herramientas de la consola para obtener, preparar y consultar conjuntos de datos
 - Definir, agregar, modificar y consultar bases de datos con MySQL
 - Definir, agregar, modificar y consultar bases de datos con MondoDB
 - Consultar datos por medio de API en la nube
 
 ### ORGANIZACIÓN DE MÓDULO
 
-- [Sesión 1: Consola y vim](Sesion-01/): 
+- [Sesión 1: Introducción a la Consola](Sesion-01/):
 - [Sesión 2: Formateo de archivos de datos desde consola unix](Sesion-02/):
 - [Sesión 3: Fundamentos de MySQL](Sesion-03/):
 - [Sesión 4: Consultas de datos relacionales](Sesion-04/):
