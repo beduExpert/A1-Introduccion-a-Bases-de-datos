@@ -1,11 +1,13 @@
-## Sesión: Consola y VIM
+[`Fundamentos de Base de Datos`](../Readme.md) > `Sesión 01`
+## Introducción a la terminal de comandos
 
 ### OBJETIVOS
- - Conocer los comandos de administración de archivos de la terminal.
- - Conocer los comandos del editor VIM así como permisos de archivos. 
+- Conocer las herramientas de la terminal para obtener, preparar y consultar conjuntos de datos.
+- Conocer los comandos para manipular carpetas y archivos
+- ???
 
 ### ORGANIZACIÓN DE CLASE
-- Comandos relacionados con el sistema de archivos
+- Comandos para manipular carpetas y archivos
     - [Ejemplo 1](Ejemplo-01)
     - [Ejemplo 2](Ejemplo-02)
     - [Reto 1](Reto-01)
