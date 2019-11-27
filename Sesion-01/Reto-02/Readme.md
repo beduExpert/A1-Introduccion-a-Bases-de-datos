@@ -16,10 +16,10 @@
 
 1. Para continuar es necesario descargar un conjunto de datos (dataset), colocarlo en la carpeta de trabajo `Datos`, descomprimir el archivo zip obtenido y crear un respaldo de la carpeta obtenida con la terminación `.1` que será nuestra primer respaldo por si acaso dañamos nuestros archivos.
 
-La URL del archivo a descargar es:
-   - http://files.grouplens.org/datasets/movielens/ml-1m.zip
+   La URL del archivo a descargar es:
+     - http://files.grouplens.org/datasets/movielens/ml-1m.zip
 
-Todos los archivos y/o carpetas deben quedar dentro del la carpeta `Sesion-01/Reto-02` debiendo obtener una lista de carpetas y archivos similar a la siguiente:
+   Todos los archivos y/o carpetas deben quedar dentro del la carpeta `Sesion-01/Reto-02` debiendo obtener una lista de carpetas y archivos similar a la siguiente:
 
    ```console
    Datos
