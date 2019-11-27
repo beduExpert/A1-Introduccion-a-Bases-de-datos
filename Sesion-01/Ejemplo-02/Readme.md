@@ -1,12 +1,33 @@
 ## Manejo Básico del Sistema de Archivos
 
-### OBJETIVO 
+### OBJETIVO
  - Conocer cómo interactuar con tu ambiente desde la consola
 
-#### REQUISITOS 
+#### REQUISITOS
 1. Consola
 
 #### DESARROLLO
+6. Crea dos archivos de text vacíos
+```
+$ touch text1.txt text2.txt
+```
+7. Muestra qué contiene el directorio en el que te encuentras
+```
+$ls
+```
+8. Copia text1.txt a la carpeta archivos1
+```
+$cp text1.txt archivos1
+````
+9. Mueve text2.txt a la carpeta archivos2
+```
+$mv text2.txt archivos2
+```
+10. Muestra qué contiene el directorio en el que te encuentras
+```
+$ls
+```
+
 Tomando como punto de partida del Ejemplo-01
 1. Posiciónate dentro del directorio archivos1
 ```
