@@ -142,4 +142,6 @@
    ```
    En este caso se está descargando un archivo de aproximadamente 3.1GB, con la opción `-C -` (hay espacio antes del último guión) la descarga continua donde se quedó en caso de que sea interrumpida y con la opión `--retry 999` en caso de que la descarga sea interrumpida, curl intentará nuevamente la descarga y lo reintentará hasta 999 veces.
 
+   __Nota:__ Para cancelar la ejecución de cualquier comando en la terminal presiona las teclas __Control+C__.
+
 __Felicidades, has aprendido la habilidad de manipular archivos desde la terminal__
