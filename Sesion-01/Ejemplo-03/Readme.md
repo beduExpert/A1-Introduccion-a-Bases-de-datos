@@ -2,9 +2,9 @@
 ## Comandos para preparar y consultar conjuntos de datos
 
 ### OBJETIVOS
-- Crear y visualizar archivos desde la terminal
-- Conocer los comandos para manipular archivos
-- Descargar archivos desde la terminal
+- Analizar contenido de archivos
+- Preparar y formatear archivos a formatos conocidos
+- Realizar consultas para filtrar y obtener conteo de resultados
 
 #### REQUISITOS
 1. Git Bash instalado para equipos con Windows
