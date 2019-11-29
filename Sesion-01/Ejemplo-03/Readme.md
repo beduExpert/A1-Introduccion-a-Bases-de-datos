@@ -1,32 +1,43 @@
-## Creando un Script con Vim
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Ejemplo-03
+## Comandos para preparar y consultar conjuntos de datos
 
-### OBJETIVO 
- - Crear y editar archivos básicos con Vim.
+### OBJETIVO
+- Crear y visualizar archivos desde la terminal
+- Conocer los comandos para manipular archivos
+- Descargar archivos desde la terminal
 
-#### REQUISITOS 
-1. Vim
-2. Consola 
+#### REQUISITOS
+1. Git Bash instalado para equipos con Windows
+1. Carpeta de repositorio actualizada
+1. Reto-02 terminado
 
 #### DESARROLLO
+1. Abrir la terminal en Linux o MacOS y Git Bash en Windows
+
+1. Haz que tu carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-03/`
+   ```console
+   $ cd Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-03
+   Ejemplo-03 $ pwd
+   .../Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-03
+   Ejemplo-03 $
+   ```
+
+1. Copiar la carpeta `Datos` creada en el `Reto-02` y moverse a esa carpeta
+   ```console
+   Ejemplo-03 $ cp -a ../Reto-02/Datos .
+   Ejemplo-03 $ ls
+   Datos
+   Ejemplo-03 $ cd Datos
+   Ejemplo-03/Datos $
+   ```
+
 1. Abre vim inicializando un archivo con nombre mi_script.sh
 ```
 $vi mi_script.sh
 ```
-2. Entra en modo inserción presionando la tecla i e ingresa la siguiente línea al archivo
-````
-echo Iniciando mi_script.sh
-````
-3. Presionando esc entramos en modo comando. Guardar y salirte de vim.
-````
-:wq [Enter]
-````
 4. Muestra los contenidos de nuestro script para confirmar nuestra escritura.
 ```
 $cat mi_script.sh
-```
-5. Vuelve a abrir mi_script.sh con Vim
-```
-$vi mi_script.sh
 ```
 6. Entra en modo inserción e inserta el resto del sript
 ```
