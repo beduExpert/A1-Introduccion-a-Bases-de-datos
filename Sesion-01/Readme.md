@@ -2,17 +2,17 @@
 ## Introducción a la terminal de comandos
 
 ### OBJETIVOS
-- Conocer las herramientas de la terminal para obtener, preparar y consultar conjuntos de datos.
+- Conocer la terminal
 - Conocer los comandos para manipular carpetas y archivos
-- ???
+- Conocer comandos para preparar y consultar conjuntos de datos
 
 ### ORGANIZACIÓN DE CLASE
 - Comandos para manipular carpetas
     - [Ejemplo 1](Ejemplo-01)
     - [Reto 1](Reto-01)
-- Comandos para manipular archivos
+- Comandos para manipular y obtener archivos
     - [Ejemplo 2](Ejemplo-02)
     - [Reto 2](Reto-02)
-- Comandos básicos de VIM así como permisos de archivos.
+- Comandos para preparar y consultar conjuntos de datos
     - [Ejemplo 3](Ejemplo-03)
-    - [Reto 3](Reto-03)
+    - [Proyecto](Proyecto)
