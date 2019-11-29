@@ -112,3 +112,11 @@ A continuación se revisará, preparará y analizarán los archivos contenidos e
    Si el comando ha sido bien escrito, se deberá de imprimir todos los registros del archivo con los dos puntos remplazados por coma, si no es así, significa que es necesario ajustar el comando hasta obtener el resultado deseado.
 
    El comando `sed` es un editor desde la línea de comando y la operación realizada es buscar y remplazar, lo que se hace con la cadena de texto `"s/origen/replazo/g"`, la `s` significa _search_ y la `g` significa reemplazar todas las apariciones de _origen_ en una línea, es importante considerar que la operación de búsqueda y remplazo se ejecuta línea a línea.
+
+   Cuando los resultados son los esperados, entonces se redirecciona la salida del comando `sed` hacia el archivo `users.csv`.
+   ```console
+   ml-1m $ sed "s/::/,/g" users.dat > users.csv
+   ml-1m $ ls
+   movies.dat  ratings.dat  README  users.csv  users.dat
+   ml-1m $
+   ```
