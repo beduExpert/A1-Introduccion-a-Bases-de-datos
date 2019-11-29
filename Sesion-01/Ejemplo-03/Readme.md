@@ -4,7 +4,7 @@
 ### OBJETIVOS
 - Analizar contenido de archivos
 - Preparar y formatear archivos a formatos conocidos (CSV, JSON)
-- Realizar consultas para filtrar y obtener conteo de resultados
+- Realizar conteo de resultados
 
 #### REQUISITOS
 1. Git Bash instalado para equipos con Windows
@@ -120,3 +120,17 @@ A continuación se revisará, preparará y analizarán los archivos contenidos e
    movies.dat  ratings.dat  README  users.csv  users.dat
    ml-1m $
    ```
+
+1. Una forma de corroborar que el contenido de nuestro archivo `users.csv` coincide con el archivo `users.dat` es contar la cantidad de registros en cada archivo, eso se puede realizar con el comando `wc archivo1 archivo2 ... archivoN`
+   ```console
+   ml-1m $ wc users.dat users.csv
+    6040   6040 134368 users.dat
+    6040   6040 110208 users.csv
+   12080  12080 244576 total
+   ml-1m $
+   ```
+   La primera columna indica el total de líneas en cada archivo, la segunda es el total de palabras (una palabra es un conjunto de caracteres sin espacios) y la tercera es la cantidad de bytes en el archivo.
+
+   A nosotros nos interesa que la el valor de la primera columna en ambos archivos sea la misma, en este caso 6040. __Misión cumplida__
+
+__Dato curioso:__ Observa que al presionar __ENTER__ para ejecutar los comandos, el tiempo de respuesta para cada operación en general es décimas de segundo o de algunos segundos, eso es debido a que cada comando está optimizado para realizar una sola operación de la manera más eficiente posible.
