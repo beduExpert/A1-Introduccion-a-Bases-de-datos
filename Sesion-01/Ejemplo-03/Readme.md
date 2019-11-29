@@ -87,3 +87,28 @@ A continuación se revisará, preparará y analizarán los archivos contenidos e
    - __Espacio__: Avanza una página completa en el contenido
    - __B__: Regresa media página en el contenido
    - __Q__: Salir del comando `less`
+
+   Así que has uso de las teclas mencionadas para ubicar la información correspondiente al archivo `users.dat` con lo que ya se puede comprender la información de cada registro y cada columna.
+
+   Presiona la tecla `Q` para salir de `less`
+
+1. Convirtiendo de `users.dat` a `users.csv`, recordando que el formato CSV los campos son separados por comas, se procede a remplazar los `::` por `,` haciendo uso del comando `sed`
+   ```console
+   ml-1m $ sed "s/::/,/g" users.dat
+   [...]
+   6030,M,25,17,32618
+   6031,F,18,0,45123
+   6032,M,45,7,55108
+   6033,M,50,13,78232
+   6034,M,25,14,94117
+   6035,F,25,1,78734
+   6036,F,25,15,32603
+   6037,F,45,1,76006
+   6038,F,56,1,14706
+   6039,F,45,0,01060
+   6040,M,25,6,11106
+   ml-1m $
+   ```
+   Si el comando ha sido bien escrito, se deberá de imprimir todos los registros del archivo con los dos puntos remplazados por coma, si no es así, significa que es necesario ajustar el comando hasta obtener el resultado deseado.
+
+   El comando `sed` es un editor desde la línea de comando y la operación realizada es buscar y remplazar, lo que se hace con la cadena de texto `"s/origen/replazo/g"`, la `s` significa _search_ y la `g` significa reemplazar todas las apariciones de _origen_ en una línea, es importante considerar que la operación de búsqueda y remplazo se ejecuta línea a línea.
