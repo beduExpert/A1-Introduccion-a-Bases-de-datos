@@ -3,7 +3,7 @@
 
 ### OBJETIVOS
 - Analizar contenido de archivos
-- Preparar y formatear archivos a formatos conocidos
+- Preparar y formatear archivos a formatos conocidos (CSV, JSON)
 - Realizar consultas para filtrar y obtener conteo de resultados
 
 #### REQUISITOS
