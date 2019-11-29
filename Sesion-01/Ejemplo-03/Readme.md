@@ -81,3 +81,9 @@ A continuación se revisará, preparará y analizarán los archivos contenidos e
            * 56:  "56+"
    :
    ```
+   El comando `less` abre el archivo mostrando tantas líneas como es posible y al final se muestra una línea con dos puntos que indica que el comando `less` está esperando a que el usuario presione alguna tecla, donde cada tecla hará que se ejecute una acción, una lista de las teclas y las acciones más usadas son:
+
+   - __ENTER__: Avanza una línea en el contenido
+   - __Espacio__: Avanza una página completa en el contenido
+   - __B__: Regresa media página en el contenido
+   - __Q__: Salir del comando `less`
