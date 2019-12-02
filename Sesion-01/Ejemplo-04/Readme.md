@@ -1,17 +1,17 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Ejemplo-04
-## Comandos para consultar conjuntos de datos y automatización
+## Comandos para realizar consultas a los conjuntos de datos
 
 ### OBJETIVOS
 - Analizar contenido de archivos
 - Realizar consulta y filtrado de resultados
-- Automatizar tareas con la creación de scripts
+- Obtener resultados
 
-#### REQUISITOS
+### REQUISITOS
 1. Git Bash instalado para equipos con Windows
 1. Carpeta de repositorio actualizada
 1. Reto-03 terminado
 
-#### DESARROLLO
+### DESARROLLO
 En el Reto-03 se terminó de preparar todos los archivos en formato CSV con y sin encabezados que serán usados en este ejemplo, así que también es necesario copiar la carpeta `Datos`.
 
 1. Haz que tu carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-04/`
@@ -91,31 +91,20 @@ En el Reto-03 se terminó de preparar todos los archivos en formato CSV con y si
    ```
    Por lo tanto tenemos `116` usuarios que cumplen con ambos criterios. __Misión cumplida__
 
-
-1. Abre vim inicializando un archivo con nombre mi_script.sh
-```
-$vi mi_script.sh
-```
-4. Muestra los contenidos de nuestro script para confirmar nuestra escritura.
-```
-$cat mi_script.sh
-```
-6. Entra en modo inserción e inserta el resto del sript
-```
-echo Iniciando mi_script.sh
-echo Creando Carpeta Raíz
-mkdir mi_proyecto
-cd mi_proyecto
-echo Creando Carpetas...
-mkdir carpeta1 carpeta2 carpeta3
-echo Creando archivos
-touch carpeta1/archivo1.txt carpeta2/archivo2.txt carpeta3/archivo3.txt
-echo Descargando información
-wget -O datos.csv https://raw.githubusercontent.com/ChitturiPadma/datasets/master/uber.csv
-echo Finalizando ejecución
-```
-7. Darle permiso de ejecución al script y corre el script
-```
-$chmod +x mi_script.sh
-$./mi_script.sh
-```
+1. Se desea almacenar la lista de los usuarios obtenidos en el punto anterior en el archivo `users-gM-o15.csv`
+   ```console
+   ml-1m $ grep M users.csv | grep ,15, > users-gM-o15.csv
+   ml-1m $ head users-gM-o15.csv
+   3,M,25,15,55117
+   22,M,18,15,53706
+   109,M,45,15,92028
+   111,M,35,15,55416
+   228,M,25,15,55455
+   366,M,50,15,55126
+   412,M,35,15,55117
+   534,M,25,15,55902
+   560,M,45,15,81335
+   760,M,56,15,94114
+   ml-1m $
+   ```
+   Recordar que para almacenar el resultado de un comando en general se tiene que hacer uso del operador `>` para redireccionar la salida a el nombre de archivo indicado. __Datos almacenados__
