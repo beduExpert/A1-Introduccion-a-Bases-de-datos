@@ -131,6 +131,21 @@ A continuación se revisará, preparará y analizarán los archivos contenidos e
    ```
    La primera columna indica el total de líneas en cada archivo, la segunda es el total de palabras (una palabra es un conjunto de caracteres sin espacios) y la tercera es la cantidad de bytes en el archivo.
 
-   A nosotros nos interesa que la el valor de la primera columna en ambos archivos sea la misma, en este caso 6040. __Misión cumplida__
+   A nosotros nos interesa que la el valor de la primera columna en ambos archivos sea la misma, en este caso 6040.
+
+1. En alguna ocasiones se necesita que la primer línea de los archivos CSV contenga el nombre de las columnas o los campos, así que se creará el archivo `users-h.csv` que incluya los encabezados.
+   ```console
+   ml-1m $ echo id,gen,edad,ocup,cp | cat - users.csv > users-h.csv
+   ml-1m $ head -n 3 users-h.csv
+   id,gen,edad,ocup,cp
+   1,F,1,10,48067
+   2,M,56,16,70072
+   ml-1m $
+   ```
+   En este caso se hace uso combinado del comando `echo` para generar la fila con los encabezados y luego se hace uso de una forma especial del comando `cat` para concatenar el resultado del comando `echo` con el contenido del archivo `users.csv` en este orden. El resultado del comando `cat` se redirecciona al archivo `users-h.csv` por medio del símbolo `>`.
+
+   Al final con el comando `head` se verifica el contenido de las 3 primeras líneas del archivo `users-h.csv`
+
+   __Misión cumplida__
 
 __Dato curioso:__ Observa que al presionar __ENTER__ para ejecutar los comandos, el tiempo de respuesta para cada operación en general es décimas de segundo o de algunos segundos, eso es debido a que cada comando está optimizado para realizar una sola operación de la manera más eficiente posible.
