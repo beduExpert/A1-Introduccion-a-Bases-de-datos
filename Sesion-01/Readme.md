@@ -19,6 +19,6 @@
 - Comandos para realizar consultas a los conjuntos de datos
     - [Ejemplo 4](Ejemplo-04)
     - [Proyecto](Proyecto)
-- Automatización de tareas con scripts (opcional)
+- Automatización de tareas con scripts (Opcional)
     - [Ejemplo 5](Ejemplo-05)
     - [Reto 5](Reto-05)
