@@ -15,7 +15,10 @@
     - [Reto 2](Reto-02)
 - Comandos para preparar y contar conjuntos de datos
     - [Ejemplo 3](Ejemplo-03)
-    - [Reto-03](Reto-03)
-- Comandos para consultar conjuntos de datos y automatización
+    - [Reto 3](Reto-03)
+- Comandos para realizar consultas a los conjuntos de datos
     - [Ejemplo 4](Ejemplo-04)
     - [Proyecto](Proyecto)
+- Automatización de tareas con scripts (opcional)
+    - [Ejemplo 5](Ejemplo-05)
+    - [Reto 5](Reto-05)
