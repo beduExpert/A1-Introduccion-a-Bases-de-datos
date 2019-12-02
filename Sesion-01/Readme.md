@@ -13,6 +13,9 @@
 - Comandos para manipular y obtener archivos
     - [Ejemplo 2](Ejemplo-02)
     - [Reto 2](Reto-02)
-- Comandos para preparar y consultar conjuntos de datos
+- Comandos para preparar y contar conjuntos de datos
     - [Ejemplo 3](Ejemplo-03)
+    - [Reto-03](Reto-03)
+- Comandos para consultar conjuntos de datos y automatización
+    - [Ejemplo 4](Ejemplo-04)
     - [Proyecto](Proyecto)
