@@ -4,21 +4,19 @@
 ### OBJETIVOS
 - Conocer la terminal
 - Conocer los comandos para manipular carpetas y archivos
-- Conocer comandos para preparar y consultar conjuntos de datos
+- Conocer comandos para obtener conjuntos de datos
+- Conocer como automatizar tareas con el uso de scripts
 
 ### ORGANIZACIÓN DE CLASE
 - Comandos para manipular carpetas
     - [Ejemplo 1](Ejemplo-01)
     - [Reto 1](Reto-01)
-- Comandos para manipular y obtener archivos
+- Comandos para manipular archivos
     - [Ejemplo 2](Ejemplo-02)
     - [Reto 2](Reto-02)
-- Comandos para preparar y contar conjuntos de datos
+- Comandos para obtener y descomprimir archivos
     - [Ejemplo 3](Ejemplo-03)
     - [Reto 3](Reto-03)
-- Comandos para realizar consultas a los conjuntos de datos
+- Automatización de tareas con scripts
     - [Ejemplo 4](Ejemplo-04)
     - [Proyecto](Proyecto)
-- Automatización de tareas con scripts (Opcional)
-    - [Ejemplo 5](Ejemplo-05)
-    - [Reto 5](Reto-05)
