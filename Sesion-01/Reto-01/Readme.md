@@ -5,11 +5,11 @@
 - Ejecutar comandos para manipular carpetas
 - Adquirir la habilidad en el uso de la terminal
 
-#### REQUISITOS
+### REQUISITOS
 1. Git Bash instalado para equipos con Windows
 1. Carpeta de repositorio actualizada
 
-#### DESARROLLO
+### DESARROLLO
 1. Abrir la terminal (Linux y Mac) o Git Bash (Windows) si no está abierta
 
 1. Al comenzar un nuevo proyecto es recomendable crear una estructura básica de carpetas, así que tu tarea consiste en replicar la siguiente estructura utilizando sólo la consola.
