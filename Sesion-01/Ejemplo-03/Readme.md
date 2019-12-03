@@ -102,11 +102,21 @@
 
    ```console
    Ejemplo-03 $ curl -O -C - --retry 999 http://files.grouplens.org/datasets/movielens/ml-20mx16x32.tar
+   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                  Dload  Upload   Total   Spent    Left  Speed
+   0 3173M    0  967k    0     0  94041      0  9:49:42  0:00:10  9:49:32 26626
+   Ejemplo-03 $
    ```
    En este caso se está descargando un archivo de aproximadamente 3.1GB, con la opción `-C -` (hay espacio antes del último guión) la descarga continua donde se quedó en caso de que sea interrumpida y con la opión `--retry 999` en caso de que la descarga sea interrumpida `curl` reintentará hasta 999 veces la descarga.
 
    __Nota:__ Para cancelar la ejecución de cualquier comando en la terminal presiona las teclas __Control+C__.
 
    Se cancela la descarga y se borra el archivo `ml-20mx16x32.tar` ya que es un archivo incompleto.
+   ```console
+   Ejemplo-03 $ rm ml-20mx16x32.tar
+   Ejemplo-03 $ ls
+   ml-1m-README.txt
+   Ejemplo-03 $
+   ```
 
 __Felicidades__ Has aprendido la habilidad de descargar archivos desde la terminal
