@@ -1,84 +1,87 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Ejemplo-03
-## Comandos para preparar y consultar conjuntos de datos
+## Comandos para obtener y descomprimir archivos
 
 ### OBJETIVOS
-- Analizar contenido de archivos
-- Preparar y formatear archivos a formatos conocidos (CSV, JSON)
-- Realizar conteo de resultados
+- Descargar archivos desde la terminal
+- Descomprimir archivos desde la terminal
 
 #### REQUISITOS
 1. Git Bash instalado para equipos con Windows
+1. Comandos `curl` y `unzip` instalados en Linux, MacOS y Windows
 1. Carpeta de repositorio actualizada
-1. Reto-02 terminado
 
 #### DESARROLLO
-En el Reto-02 se descargó el conjunto de datos (dataset) __MovieLens 1M__ que corresponde a un millón de valoraciones realizadas por usuarios a películas. Los datos son generados por el sitio http://movielens.org y preparados por GroupLens https://grouplens.org/datasets/movielens
-
-A continuación se revisará, preparará y analizarán los archivos contenidos en el archivo descargado y que están contenido en la carpeta `Datos`.
-
 1. Abrir la terminal en Linux o MacOS y Git Bash en Windows
 
 1. Haz que tu carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-03/`
    ```console
    $ cd Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-03
-   Ejemplo-03 $ pwd
-   .../Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-03
    Ejemplo-03 $
    ```
 
-1. Copiar la carpeta `Datos` creada en el `Reto-02` y moverse a la carpeta `Datos/ml-1m/`
+1. Para descargar archivos se hace uso del comando `curl -O URL` o `curl -o nombre.txt URL` si se desea asignar un nombre al archivo de descarga distinto.
+
+   A continuación se descargará el archivo indicado por la siguiente URL:
+   - http://files.grouplens.org/datasets/movielens/ml-1m-README.txt
+
    ```console
-   Ejemplo-03 $ cp -a ../Reto-02/Datos .
+   Ejemplo-03 $ curl -O http://files.grouplens.org/datasets/movielens/ml-1m-README.txt
+   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                  Dload  Upload   Total   Spent    Left  Speed
+   100  5576  100  5576    0     0   453k      0 --:--:-- --:--:-- --:--:--  453k
    Ejemplo-03 $ ls
-   Datos
-   Ejemplo-03 $ cd Datos/ml-1m
-   ml-1m $
+   ml-1m-README.txt
+   Ejemplo-02 $
    ```
+   El comando `curl` descarga el contenido del archivo `ml-1m-README.txt` indicado por la URL y guarda en el archivo con el mismo nombre. Se hace uso del comando `ls` para validar la descarga.
 
-1. Mostrar las primeras 10 líneas del archivo `users.dat` para conocer su estructura y el tipo de información que contiene
+   Para ver el contenido del archivo se hace uso del comando `cat`
    ```console
-   ml-1m $ head users.dat
-   1::F::1::10::48067
-   2::M::56::16::70072
-   3::M::25::15::55117
-   4::M::45::7::02460
-   5::M::25::20::55455
-   6::F::50::9::55117
-   7::M::35::1::06810
-   8::M::25::12::11413
-   9::M::25::17::61614
-   10::F::35::1::95370
-   ml-1m $
+   Ejemplo-03 $ cat ml-1m-README.txt
+   [...]
+   * Film-Noir
+   * Horror
+ 	 * Musical
+   * Mystery
+   * Romance
+   * Sci-Fi
+   * Thriller
+   * War
+   * Western
+
+   - Some MovieIDs do not correspond to a movie due to accidental duplicate
+     entries and/or test entries
+   - Movies are mostly entered by hand, so errors and inconsistencies may exist
+   Ejemplo-03 $
    ```
-   El comando `head` muestra sólo la primeras 10 líneas del archivo indicado, se puede agregar la opción `-n N` para mostrar sólo _N_ líneas.
+   El comando `cat` imprime el contenido de todo el archivo y sólo se observan las últimas líneas, dependerá del tamaño de la ventana de la terminal cuantas líneas se observan al final.
 
-   Al ver el contenido del archivo ¿se puede comprender el significado del contenido?
-
-   Posiblemente sea necesaria un poco de ayuda y es donde la documentación entra en juego, por lo que se abre el archivo `README` usando el comando `less` para mostrar su contenido por páginas:
+1. Para poder revisar el contenido de archivos muy grandes se puede hacer uso del comando `less nombre-de-archivos`
    ```console
-   ml-1m $ less README
-   USERS FILE DESCRIPTION
+   Ejemplo-03 $ less ml-1m-README.txt
+   SUMMARY
    ================================================================================
 
-   User information is in the file "users.dat" and is in the following
-   format:
+   These files contain 1,000,209 anonymous ratings of approximately 3,900 movies
+   made by 6,040 MovieLens users who joined MovieLens in 2000.
 
-   UserID::Gender::Age::Occupation::Zip-code
+   USAGE LICENSE
+   ================================================================================
 
-   All demographic information is provided voluntarily by the users and is
-   not checked for accuracy.  Only users who have provided some demographic
-   information are included in this data set.
+   Neither the University of Minnesota nor any of the researchers
+   involved can guarantee the correctness of the data, its suitability
+   for any particular purpose, or the validity of results based on the
+   use of the data set.  The data set may be used for any research
+   purposes under the following conditions:
 
-   - Gender is denoted by a "M" for male and "F" for female
-   - Age is chosen from the following ranges:
+        * The user may not state or imply any endorsement from the
+          University of Minnesota or the GroupLens Research Group.
 
-           *  1:  "Under 18"
-           * 18:  "18-24"
-           * 25:  "25-34"
-           * 35:  "35-44"
-           * 45:  "45-49"
-           * 50:  "50-55"
-           * 56:  "56+"
+        * The user must acknowledge the use of the data set in
+          publications resulting from the use of the data set
+          (see below for citation information).
+
+        * The user may not redistribute the data without separate
    :
    ```
    El comando `less` abre el archivo mostrando tantas líneas como es posible y al final se muestra una línea con dos puntos que indica que el comando `less` está esperando a que el usuario presione alguna tecla, donde cada tecla hará que se ejecute una acción, una lista de las teclas y las acciones más usadas son:
@@ -88,64 +91,32 @@ A continuación se revisará, preparará y analizarán los archivos contenidos e
    - __B__: Regresa media página en el contenido
    - __Q__: Salir del comando `less`
 
-   Así que has uso de las teclas mencionadas para ubicar la información correspondiente al archivo `users.dat` con lo que ya se puede comprender la información de cada registro y cada columna.
+   Así que has uso de las teclas mencionadas para ubicar la información correspondiente al archivo `users.dat`, esta informaciónla usaremos más adelante.
 
-   Presiona la tecla `Q` para salir de `less`
+   Presiona la tecla `Q` para salir de `less`   
 
-1. Convirtiendo de `users.dat` a `users.csv`, recordando que el formato CSV los campos son separados por comas, se procede a remplazar los `::` por `,` haciendo uso del comando `sed`
+1. El comando `curl` también se puede utilizar para descargar archivo gigantes usando las opciones `-C - --retry 999`.
+
+   Descargar el archivo de 3.1GB desde la siguiente URL:
+   - http://files.grouplens.org/datasets/movielens/ml-20mx16x32.tar
+
    ```console
-   ml-1m $ sed "s/::/,/g" users.dat
-   [...]
-   6030,M,25,17,32618
-   6031,F,18,0,45123
-   6032,M,45,7,55108
-   6033,M,50,13,78232
-   6034,M,25,14,94117
-   6035,F,25,1,78734
-   6036,F,25,15,32603
-   6037,F,45,1,76006
-   6038,F,56,1,14706
-   6039,F,45,0,01060
-   6040,M,25,6,11106
-   ml-1m $
+   Ejemplo-03 $ curl -O -C - --retry 999 http://files.grouplens.org/datasets/movielens/ml-20mx16x32.tar
+   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                  Dload  Upload   Total   Spent    Left  Speed
+   0 3173M    0  967k    0     0  94041      0  9:49:42  0:00:10  9:49:32 26626
+   Ejemplo-03 $
    ```
-   Si el comando ha sido bien escrito, se deberá de imprimir todos los registros del archivo con los dos puntos remplazados por coma, si no es así, significa que es necesario ajustar el comando hasta obtener el resultado deseado.
+   En este caso se está descargando un archivo de aproximadamente 3.1GB, con la opción `-C -` (hay espacio antes del último guión) la descarga continua donde se quedó en caso de que sea interrumpida y con la opión `--retry 999` en caso de que la descarga sea interrumpida `curl` reintentará hasta 999 veces la descarga.
 
-   El comando `sed` es un editor desde la línea de comando y la operación realizada es buscar y remplazar, lo que se hace con la cadena de texto `"s/origen/replazo/g"`, la `s` significa _search_ y la `g` significa reemplazar todas las apariciones de _origen_ en una línea, es importante considerar que la operación de búsqueda y remplazo se ejecuta línea a línea.
+   __Nota:__ Para cancelar la ejecución de cualquier comando en la terminal presiona las teclas __Control+C__.
 
-   Cuando los resultados son los esperados, entonces se redirecciona la salida del comando `sed` hacia el archivo `users.csv`.
+   Se cancela la descarga y se borra el archivo `ml-20mx16x32.tar` ya que es un archivo incompleto.
    ```console
-   ml-1m $ sed "s/::/,/g" users.dat > users.csv
-   ml-1m $ ls
-   movies.dat  ratings.dat  README  users.csv  users.dat
-   ml-1m $
+   Ejemplo-03 $ rm ml-20mx16x32.tar
+   Ejemplo-03 $ ls
+   ml-1m-README.txt
+   Ejemplo-03 $
    ```
 
-1. Una forma de corroborar que el contenido de nuestro archivo `users.csv` coincide con el archivo `users.dat` es contar la cantidad de registros en cada archivo, eso se puede realizar con el comando `wc archivo1 archivo2 ... archivoN`
-   ```console
-   ml-1m $ wc users.dat users.csv
-    6040   6040 134368 users.dat
-    6040   6040 110208 users.csv
-   12080  12080 244576 total
-   ml-1m $
-   ```
-   La primera columna indica el total de líneas en cada archivo, la segunda es el total de palabras (una palabra es un conjunto de caracteres sin espacios) y la tercera es la cantidad de bytes en el archivo.
-
-   A nosotros nos interesa que la el valor de la primera columna en ambos archivos sea la misma, en este caso 6040.
-
-1. En alguna ocasiones se necesita que la primer línea de los archivos CSV contenga el nombre de las columnas o los campos, así que se creará el archivo `users-h.csv` que incluya los encabezados.
-   ```console
-   ml-1m $ echo id,gen,edad,ocup,cp | cat - users.csv > users-h.csv
-   ml-1m $ head -n 3 users-h.csv
-   id,gen,edad,ocup,cp
-   1,F,1,10,48067
-   2,M,56,16,70072
-   ml-1m $
-   ```
-   En este caso se hace uso combinado del comando `echo` para generar la fila con los encabezados y luego se hace uso de una forma especial del comando `cat` para concatenar el resultado del comando `echo` con el contenido del archivo `users.csv` en este orden. El resultado del comando `cat` se redirecciona al archivo `users-h.csv` por medio del símbolo `>`.
-
-   Al final con el comando `head` se verifica el contenido de las 3 primeras líneas del archivo `users-h.csv`
-
-   __Misión cumplida__
-
-__Dato curioso:__ Observa que al presionar __ENTER__ para ejecutar los comandos, el tiempo de respuesta para cada operación en general es décimas de segundo o de algunos segundos, eso es debido a que cada comando está optimizado para realizar una sola operación de la manera más eficiente posible.
+__Felicidades__ Has aprendido la habilidad de descargar archivos desde la terminal
