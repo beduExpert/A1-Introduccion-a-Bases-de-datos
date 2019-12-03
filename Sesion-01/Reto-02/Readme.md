@@ -16,7 +16,7 @@
    ```console
    $ cd Introduccion-a-Bases-de-Datos/Sesion-01/Reto-02
    Reto $ pwd
-   .../Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-02
+   .../Introduccion-a-Bases-de-Datos/Sesion-01/Reto-02
    Reto-02 $
    ```
 
@@ -82,7 +82,9 @@
    rmdir Elimina una carpeta vacía
    Reto-02 $
    ```
-   Observa que el resultado de ambos archivos se muestra de forma consecutiva, así que esta es una manera de juntar o concatenar dos archivos, así que ahora crear el archivo `todo.txt` con el contenido de ambos archivos.
+   Observa que el resultado de ambos archivos se muestra de forma consecutiva, así que esta es una manera de juntar o concatenar dos archivos.
+
+   Ahora crea el archivo `todo.txt` con el contenido de ambos archivos.
    ```console
    Reto-02 $ cat terminal-chuleta.txt terminal-chuleta.1.txt > todo.txt
    Reto-02 $ cat todo.txt
