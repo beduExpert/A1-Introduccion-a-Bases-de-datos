@@ -1,9 +1,9 @@
-[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Reto-02
-## Comandos para manipular archivos
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Reto-03
+## Comandos para obtener y descomprimir archivos
 
 ### OBJETIVO
-- Ejecutar comandos para manipular archivos
 - Ejecutar comandos para descargar archivos
+- Ejecutar comandos para descomprimir archivos
 - Adquirir la habilidad en el uso de la terminal
 
 #### REQUISITOS
@@ -14,12 +14,12 @@
 #### DESARROLLO
 1. Abrir la terminal (Linux y Mac) o Git Bash (Windows) si no está abierta
 
-1. Para continuar es necesario descargar un conjunto de datos (dataset), colocarlo en la carpeta de trabajo `Datos`, descomprimir el archivo zip obtenido y crear un respaldo de la carpeta obtenida con la terminación `.1` que será nuestra primer respaldo por si acaso dañamos nuestros archivos.
+1. Para continuar es necesario descargar un conjunto de datos (dataset), colocarlo en la carpeta de trabajo `Datos`, descomprimir el archivo zip obtenido y crear un respaldo de la carpeta obtenida con la terminación `.1` que será nuestra primer respaldo por si acaso dañamos nuestros archivos. Finalmente borrar el archivo con extensión zip.
 
    La URL del archivo a descargar es:
      - http://files.grouplens.org/datasets/movielens/ml-1m.zip
 
-   Todos los archivos y/o carpetas deben quedar dentro del la carpeta `Sesion-01/Reto-02` debiendo obtener una lista de carpetas y archivos similar a la siguiente:
+   Todos los archivos y/o carpetas deben quedar dentro del la carpeta `Sesion-01/Reto-03` debiendo obtener una lista de carpetas y archivos similar a la siguiente:
 
    ```console
    Datos
@@ -29,20 +29,20 @@
    │   ├── README
    │   └── users.dat
    ├── ml-1m.1
-   │   ├── movies.dat
-   │   ├── ratings.dat
-   │   ├── README
-   │   └── users.dat
-   └── ml-1m.zip
+       ├── movies.dat
+       ├── ratings.dat
+       ├── README
+       └── users.dat
+
    ```
 
    __Solución:__
    ```console
    $ cd Introduccion-a-Bases-de-Datos
    Introduccion-a-Bases-de-Datos $ cd Sesion-01
-   Sesion-01 $ cd Reto-02
-   Reto-02 $ mkdir Datos
-   Reto-02 $ cd Datos
+   Sesion-01 $ cd Reto-03
+   Reto-03 $ mkdir Datos
+   Reto-03 $ cd Datos
    Datos $ curl -O  http://files.grouplens.org/datasets/movielens/ml-1m.zip
    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                   Dload  Upload   Total   Spent    Left  Speed
@@ -59,9 +59,11 @@
    Datos $ cp -a ml-1m ml-1m.1
    Datos $ ls
    ml-1m  ml-1m.1  ml-1m.zip
-   Datos $
+   Datos $ rm ml-1m.zip
+   Datos $ ls
+   ml-1m  ml-1m.1
    ```
 
 Tiempo estimado 10min, pero se podría ampliar hasta unos 20 min.
 
-__Sugerencia:__ El comando `cp` necesita la opción `-a` para poder copiar carpetas, sin embargo es algo que no se ha mencionado hasta el momento, así como el comando `unzip` para descomprimir un archivo zip desde consola, así que se sugiere impulsar a los alumnos a realizar investigación y que ellos encuentren la solución.
+__Sugerencia:__ El comando `cp` necesita la opción `-a` para poder copiar carpetas, sin embargo es algo que no se ha mencionado hasta el momento, así como el comando `unzip` para descomprimir un archivo zip desde consola, por lo que se sugiere impulsar a los alumnos a realizar investigación y que ellos encuentren la solución.
