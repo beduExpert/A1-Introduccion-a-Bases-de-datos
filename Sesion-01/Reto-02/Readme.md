@@ -1,67 +1,111 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Reto-02
 ## Comandos para manipular archivos
 
-### OBJETIVO
+### OBJETIVOS
 - Ejecutar comandos para manipular archivos
-- Ejecutar comandos para descargar archivos
 - Adquirir la habilidad en el uso de la terminal
 
-#### REQUISITOS
+### REQUISITOS
 1. Git Bash instalado para equipos con Windows
-1. Comandos `curl` y `unzip` instalado en Linux, MacOS y Windows
 1. Carpeta de repositorio actualizada
 
-#### DESARROLLO
+### DESARROLLO
 1. Abrir la terminal (Linux y Mac) o Git Bash (Windows) si no está abierta
 
-1. Para continuar es necesario descargar un conjunto de datos (dataset), colocarlo en la carpeta de trabajo `Datos`, descomprimir el archivo zip obtenido y crear un respaldo de la carpeta obtenida con la terminación `.1` que será nuestra primer respaldo por si acaso dañamos nuestros archivos.
-
-   La URL del archivo a descargar es:
-     - http://files.grouplens.org/datasets/movielens/ml-1m.zip
-
-   Todos los archivos y/o carpetas deben quedar dentro del la carpeta `Sesion-01/Reto-02` debiendo obtener una lista de carpetas y archivos similar a la siguiente:
-
+1. Haz que tu carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-01/Reto-02/`
    ```console
-   Datos
-   ├── ml-1m
-   │   ├── movies.dat
-   │   ├── ratings.dat
-   │   ├── README
-   │   └── users.dat
-   ├── ml-1m.1
-   │   ├── movies.dat
-   │   ├── ratings.dat
-   │   ├── README
-   │   └── users.dat
-   └── ml-1m.zip
+   $ cd Introduccion-a-Bases-de-Datos/Sesion-01/Reto-02
+   Reto $ pwd
+   .../Introduccion-a-Bases-de-Datos/Sesion-01/Ejemplo-02
+   Reto-02 $
    ```
 
-   __Solución:__
+1. Crea el archivo `terminal-chuleta.txt`
    ```console
-   $ cd Introduccion-a-Bases-de-Datos
-   Introduccion-a-Bases-de-Datos $ cd Sesion-01
-   Sesion-01 $ cd Reto-02
-   Reto-02 $ mkdir Datos
-   Reto-02 $ cd Datos
-   Datos $ curl -O  http://files.grouplens.org/datasets/movielens/ml-1m.zip
-   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                  Dload  Upload   Total   Spent    Left  Speed
-   100 5778k  100 5778k    0     0   904k      0  0:00:06  0:00:06 --:--:-- 1094k
-   Datos $ unzip ml-1m.zip
-   Archive:  ml-1m.zip
-      creating: ml-1m/
-     inflating: ml-1m/movies.dat        
-     inflating: ml-1m/ratings.dat       
-     inflating: ml-1m/README            
-     inflating: ml-1m/users.dat         
-   Datos $ ls
-   ml-1m  ml-1m.zip
-   Datos $ cp -a ml-1m ml-1m.1
-   Datos $ ls
-   ml-1m  ml-1m.1  ml-1m.zip
-   Datos $
+   Reto-02 $ touch terminal-chuleta.txt
+   Reto-02 $ ls
+   terminal-chuleta.txt
+   Reto-02 $
    ```
 
-Tiempo estimado 10min, pero se podría ampliar hasta unos 20 min.
+1. Usar el comando `echo` y el símbolo `>>` para agrega nuevas líneas al final del archivo `terminal-chuleta.txt`, cada línea debe contener el nombre de un comando y luego una pequeña descripción, por ejemplo:
+   ```
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   ```
 
-__Sugerencia:__ El comando `cp` necesita la opción `-a` para poder copiar carpetas, sin embargo es algo que no se ha mencionado hasta el momento, así como el comando `unzip` para descomprimir un archivo zip desde consola, así que se sugiere impulsar a los alumnos a realizar investigación y que ellos encuentren la solución.
+   ```console
+   Reto-02 $ echo pwd Muestra el nombre de la carpeta de trabajo actual >> terminal-chuleta.txt
+   Reto-02 $ echo mkdir Crear una nueva carpeta >> terminal-chuleta.txt
+   Reto-02 $ echo cd Cambia a una nueva carpeta >> terminal-chuleta.txt
+   Reto-02 $ echo cd .. Regresa a la carpeta anterior >> terminal-chuleta.txt
+   Reto-02 $ echo rmdir Elimina una carpeta vacía >> terminal-chuleta.txt
+   ```
+   Puedes agregar tantos comandos y su descripción como desees, esto es sólo un ejemplo de como crear archivos desde la terminal.
+
+1. En el punto anterior has creado el archivo `terminal-chuleta.txt`, ahora imprime el contenido del archivo
+   ```console
+   Reto-02 $ cat terminal-chuleta.txt
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   [...]
+   Reto-02 $    
+   ```
+   La cadena `[...]` es sólo para indicar que puede haber más contenido, en caso de que se haya decidido agregar más líneas.
+
+1. Crea una copia de respaldo del archivo `terminal-chuleta.txt` con el nombre `terminal-chuleta.1.txt`
+   ```console
+   Reto-02 $ cp terminal-chuleta.txt terminal-chuleta.1.txt
+   Reto-02 $ ls
+   terminal-chuleta.1.txt  terminal-chuleta.txt
+   Reto-02 $
+   ```
+
+1. Imprime el contenido de los dos archivos creados usando el comando `cat`
+   ```console
+   Reto-02 $ cat terminal-chuleta.txt terminal-chuleta.1.txt
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   Reto-02 $
+   ```
+   Observa que el resultado de ambos archivos se muestra de forma consecutiva, así que esta es una manera de juntar o concatenar dos archivos, así que ahora crear el archivo `todo.txt` con el contenido de ambos archivos.
+   ```console
+   Reto-02 $ cat terminal-chuleta.txt terminal-chuleta.1.txt > todo.txt
+   Reto-02 $ cat todo.txt
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   Reto-02 $
+   ```
+
+1. Finalmente borra el archivo `todo.txt`
+   ```console
+   Reto-02 $ rm todo.txt
+   Reto-02 $ ls
+   terminal-chuleta.1.txt  terminal-chuleta.txt
+   Reto-02 $
+   ```
+   Al final sólo deberás de tener dos archivos.
+
+__Reto cumplido:__ Has aumentado tu habilidad en el uso de la terminal
