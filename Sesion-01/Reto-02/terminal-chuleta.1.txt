@@ -1,0 +1,5 @@
+pwd Muestra el nombre de la carpeta de trabajo actual
+mkdir Crear una nueva carpeta
+cd Cambia a una nueva carpeta
+cd .. Regresa a la carpeta anterior
+rmdir Elimina una carpeta vacía

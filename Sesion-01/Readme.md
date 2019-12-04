@@ -1,15 +1,22 @@
-## Sesión: Consola y VIM
+[`Fundamentos de Base de Datos`](../Readme.md) > `Sesión 01`
+## Introducción a la terminal de comandos
 
 ### OBJETIVOS
- - Conocer los comandos de administración de archivos de la terminal.
- - Conocer los comandos del editor VIM así como permisos de archivos. 
+- Conocer la terminal
+- Conocer los comandos para manipular carpetas y archivos
+- Conocer comandos para obtener conjuntos de datos
+- Conocer como automatizar tareas con el uso de scripts
 
 ### ORGANIZACIÓN DE CLASE
-- Comandos relacionados con el sistema de archivos
+- Comandos para manipular carpetas
     - [Ejemplo 1](Ejemplo-01)
-    - [Ejemplo 2](Ejemplo-02)
     - [Reto 1](Reto-01)
+- Comandos para manipular archivos
+    - [Ejemplo 2](Ejemplo-02)
     - [Reto 2](Reto-02)
-- Comandos básicos de VIM así como permisos de archivos.
+- Comandos para obtener y descomprimir archivos
     - [Ejemplo 3](Ejemplo-03)
     - [Reto 3](Reto-03)
+- Automatización de tareas con scripts
+    - [Ejemplo 4](Ejemplo-04)
+    - [Proyecto](Proyecto)

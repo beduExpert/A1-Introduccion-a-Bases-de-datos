@@ -1,44 +1,113 @@
-## Manejo Básico del Sistema de Archivos
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Reto-02
+## Comandos para manipular archivos
 
-### OBJETIVO 
- - Conocer cómo interactuar con tu ambiente desde la consola
+### OBJETIVOS
+- Ejecutar comandos para manipular archivos
+- Adquirir la habilidad en el uso de la terminal
 
-#### REQUISITOS 
-1. Consola
+### REQUISITOS
+1. Git Bash instalado para equipos con Windows
+1. Carpeta de repositorio actualizada
 
-### DESARROLLO 
-Apartir de la estructura generada en el reto pasado hacer los cambios necesarios para llegar a la siguiente estructura, claro utilizando sólo la consola.
-```
-mi_proyecto
-    └── datos
-    	└── pokemon.csv
-    └── codigo
-        └── analisis.py
-        └── tests.py
-        └── README.md
+### DESARROLLO
+1. Abrir la terminal (Linux y Mac) o Git Bash (Windows) si no está abierta
 
-```
-#### SOLUCIÓN
-Tomando como punto de partida del Reto-01
-1. Entrar a la carpeta datos
-```
-$cd datos
-```
-2. Descarga datos con nombre de archivo pokemon.csv
-```
-$wget -O pokemon.csv https://raw.githubusercontent.com/veekun/pokedex/master/pokedex/data/csv/pokemon.csv
+1. Haz que tu carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-01/Reto-02/`
+   ```console
+   $ cd Introduccion-a-Bases-de-Datos/Sesion-01/Reto-02
+   Reto $ pwd
+   .../Introduccion-a-Bases-de-Datos/Sesion-01/Reto-02
+   Reto-02 $
+   ```
 
-```
-3. Retrocede un nivel y mueve el README.md dentro del directorio codigo
-```
-$cd ..
-$mv README.md codigo
-```
-4. Posiciónate dentro del directorio codigo
-```
-$cd codigo
-```
-5. Elimina la carpeta experimentacion y sus contenidos
-````
-$rm -R experimentacion
-````
+1. Crea el archivo `terminal-chuleta.txt`
+   ```console
+   Reto-02 $ touch terminal-chuleta.txt
+   Reto-02 $ ls
+   terminal-chuleta.txt
+   Reto-02 $
+   ```
+
+1. Usar el comando `echo` y el símbolo `>>` para agrega nuevas líneas al final del archivo `terminal-chuleta.txt`, cada línea debe contener el nombre de un comando y luego una pequeña descripción, por ejemplo:
+   ```
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   ```
+
+   ```console
+   Reto-02 $ echo pwd Muestra el nombre de la carpeta de trabajo actual >> terminal-chuleta.txt
+   Reto-02 $ echo mkdir Crear una nueva carpeta >> terminal-chuleta.txt
+   Reto-02 $ echo cd Cambia a una nueva carpeta >> terminal-chuleta.txt
+   Reto-02 $ echo cd .. Regresa a la carpeta anterior >> terminal-chuleta.txt
+   Reto-02 $ echo rmdir Elimina una carpeta vacía >> terminal-chuleta.txt
+   ```
+   Puedes agregar tantos comandos y su descripción como desees, esto es sólo un ejemplo de como crear archivos desde la terminal.
+
+1. En el punto anterior has creado el archivo `terminal-chuleta.txt`, ahora imprime el contenido del archivo
+   ```console
+   Reto-02 $ cat terminal-chuleta.txt
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   [...]
+   Reto-02 $    
+   ```
+   La cadena `[...]` es sólo para indicar que puede haber más contenido, en caso de que se haya decidido agregar más líneas.
+
+1. Crea una copia de respaldo del archivo `terminal-chuleta.txt` con el nombre `terminal-chuleta.1.txt`
+   ```console
+   Reto-02 $ cp terminal-chuleta.txt terminal-chuleta.1.txt
+   Reto-02 $ ls
+   terminal-chuleta.1.txt  terminal-chuleta.txt
+   Reto-02 $
+   ```
+
+1. Imprime el contenido de los dos archivos creados usando el comando `cat`
+   ```console
+   Reto-02 $ cat terminal-chuleta.txt terminal-chuleta.1.txt
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   Reto-02 $
+   ```
+   Observa que el resultado de ambos archivos se muestra de forma consecutiva, así que esta es una manera de juntar o concatenar dos archivos.
+
+   Ahora crea el archivo `todo.txt` con el contenido de ambos archivos.
+   ```console
+   Reto-02 $ cat terminal-chuleta.txt terminal-chuleta.1.txt > todo.txt
+   Reto-02 $ cat todo.txt
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   pwd Muestra el nombre de la carpeta de trabajo actual
+   mkdir Crear una nueva carpeta
+   cd Cambia a una nueva carpeta
+   cd .. Regresa a la carpeta anterior
+   rmdir Elimina una carpeta vacía
+   Reto-02 $
+   ```
+
+1. Finalmente borra el archivo `todo.txt`
+   ```console
+   Reto-02 $ rm todo.txt
+   Reto-02 $ ls
+   terminal-chuleta.1.txt  terminal-chuleta.txt
+   Reto-02 $
+   ```
+   Al final sólo deberás de tener dos archivos.
+
+__Reto cumplido:__ Has aumentado tu habilidad en el uso de la terminal
