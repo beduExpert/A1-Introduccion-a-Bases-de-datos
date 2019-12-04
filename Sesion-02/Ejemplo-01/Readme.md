@@ -1,4 +1,4 @@
-[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Ejemplo-01
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Ejemplo-01
 ## Comandos para preparar y contar conjuntos de datos
 
 ### OBJETIVOS
@@ -152,6 +152,19 @@ A continuación se revisará, preparará y analizarán los archivos contenidos e
    La primera columna indica el total de líneas en cada archivo, la segunda es el total de palabras (una palabra es un conjunto de caracteres sin espacios) y la tercera es la cantidad de bytes en el archivo.
 
    A nosotros nos interesa que la el valor de la primera columna en ambos archivos sea la misma, en este caso 6040 que además coincide con el total de registros obtenido anteriormente.
+
+1. Convirtiendo de `users.csv` a `users-h.csv`, donde el archivo `users-h.csv` en la primera línea contiene el nombre de las columnas y para ello se hará uso de los comandos `echo` y `cat`
+   ```console
+   ml-1m $ echo id,genero,edad,ocup,cp | cat - users.csv > users-h.csv
+   ml-1m $ head -n 3 users-h.csv
+   id,genero,edad,ocup,cp
+   1,F,1,10,48067
+   2,M,56,16,70072
+   ml-1m $
+   ```
+   El comando `echo` genera una línea con el nombre de las columnas y por medio de la tubería (pipe o barra vertical) se conecta el resultado del comando `echo` a la entrada del comando `cat`, además, de que el comando `cat` se está usando en su modo de concatenación y el resultado se redirecciona al archivo `users-h.csv`.
+
+   Para validar que se a agregado la primer línea, se hace uso del comando `head -n 3` para mostrar sólo las primeras 3 líneas.
 
 __Misión cumplida__
 
