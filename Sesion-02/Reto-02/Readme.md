@@ -81,7 +81,7 @@ En el Ejemplo-02 se continuó agregando archivos a la carpeta `Datos` en formato
 
 1. De la lista anterior obtener la lista de todos los usuarios que son estudiantes del proyecto K12.
 
-   Primero se hace una búsqueda en el archivo `Readme.ms` para obtener el código correspondiente a la actividad Estudiante de K12 y es código es el 10, por el comando queda como:
+   Primero se hace una búsqueda en el archivo `README` para obtener el código correspondiente a la actividad Estudiante de K12 y es código es el 10, así que el comando queda como:
 
    ```console
    ml-1m $ grep F users.csv | grep ,.*,1,.*, | grep ,10,
