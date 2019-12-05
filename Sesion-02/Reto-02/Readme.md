@@ -9,7 +9,7 @@
 ### REQUISITOS
 1. Git Bash instalado para equipos con Windows
 1. Carpeta de repositorio actualizada
-1. Reto-02 terminado
+1. Ejemplo-02 terminado
 
 ### DESARROLLO
 En el Ejemplo-02 se continuó agregando archivos a la carpeta `Datos` en formato CSV que serán usados en este ejemplo, así que es necesario copiar la carpeta `Datos`.
