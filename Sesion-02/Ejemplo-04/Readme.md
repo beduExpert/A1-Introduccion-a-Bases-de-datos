@@ -92,5 +92,4 @@
    ```
    Entonces en total tenemos 1600 registros con valoración 5 sobre temas de juguetes, tomando en cuenta que se ha tenido que hacer uso de dos archivos para lograr el resultado, esto más adelante con el uso de bases de datos se hará uso del concepto de relaciones.
 
-
 __Misión cumplida__
