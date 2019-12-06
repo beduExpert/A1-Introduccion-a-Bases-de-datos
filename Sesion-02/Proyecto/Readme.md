@@ -24,21 +24,6 @@
    ml-1m $
    ```
 
-1. La primera consulta consiste en imprimir toda la lista de registros con valoración de 1 del archivo `ratings.csv`, o sea todas las películas menor valoración.
-   ```console
-   ml-1m $ grep -a ,1, ratings.csv
-   [...]
-   6040,2010,5,957716795
-   6040,2019,5,956703977
-   6040,1077,5,964828799
-   6040,2022,5,956716207
-   6040,2028,5,956704519
-   6040,1094,5,956704887
-   6040,562,5,956704746
-   ml-1m $
-   ```
-   Así tenemos la lista de todos los registros que tienen valoración 1
-
 1. Imprime la lista de todos los usuarios con género femenino que dieron una valoración de 5 a la película con título "Deep Blue Sea" e indica cuantos son.
 
    Lo primero es obtener el id de la película con el título indicado
