@@ -13,16 +13,16 @@
    - [Ejemplo 1](Ejemplo-01)
 
 - Realizando operaciones con tablas y datos
-   - [Ejemplo 1](Ejemplo-01)
-   - [Reto 1](Reto-01)
+   - [Ejemplo 2](Ejemplo-02)
+   - [Reto 2](Reto-02)
 
 - Importando datos a una tabla en formato CSV
-   - [Ejemplo 1](Ejemplo-01)
-   - [Reto 1](Reto-01)
+   - [Ejemplo 3](Ejemplo-03)
+   - [Reto 3](Reto-03)
 
 - Realizando consultas para validar la importación de datos en una tabla
-    - [Ejemplo 2](Ejemplo-02)
-    - [Reto 2](Reto-02)
+    - [Ejemplo 4](Ejemplo-04)
+    - [Proyecto](Proyecto)
 
 - Realizando consultas de análisis a un tabla
     - [Ejemplo 3](Ejemplo-03)
