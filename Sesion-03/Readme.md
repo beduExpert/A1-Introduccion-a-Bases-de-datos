@@ -20,7 +20,3 @@
 - Realizando consultas para validar la importación de datos en una tabla
     - [Ejemplo 4](Ejemplo-04)
     - [Proyecto](Proyecto)
----
-- Realizando consultas de análisis a un tabla
-    - [Ejemplo 3](Ejemplo-03)
-    - [Reto 3](Reto-03)
