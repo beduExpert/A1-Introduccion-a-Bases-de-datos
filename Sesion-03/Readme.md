@@ -1,17 +1,29 @@
+[`Fundamentos de Base de Datos`](../Readme.md) > `Sesión 03`
 ## Fundamentos MySQL
 
 ### OBJETIVOS
- - Aprender la diferencia entre base de datos, manejador de base de datos y cliente de base de datos.
- - Qué operaciones podemos hacer sobre la base de datos
- - Filtrado sobre tablas
+- Conocer el concepto de bases de datos
+- Aprender la diferencia entre servidor y cliente de base de datos
+- Conocer las operaciones que podemos hacer sobre una base de datos
+- Conocer las operaciones que podemos hacer sobre una tabla
+- Realizar consultas en una base de datos
 
 ### ORGANIZACIÓN DE CLASE
-- Configurando MySQL y nuestro cliente
-    - [Ejemplo 1](Ejemplo-01)
-    - [Reto 1](Reto-01)
-- Consultando nuestra BD
+- Conectando con un Servidor MariaDB/MySQL y realizando operaciones con bases de datos
+   - [Ejemplo 1](Ejemplo-01)
+
+- Realizando operaciones con tablas y datos
+   - [Ejemplo 1](Ejemplo-01)
+   - [Reto 1](Reto-01)
+
+- Importando datos a una tabla en formato CSV
+   - [Ejemplo 1](Ejemplo-01)
+   - [Reto 1](Reto-01)
+
+- Realizando consultas para validar la importación de datos en una tabla
     - [Ejemplo 2](Ejemplo-02)
     - [Reto 2](Reto-02)
-- Filtrado Avanzado
+
+- Realizando consultas de análisis a un tabla
     - [Ejemplo 3](Ejemplo-03)
     - [Reto 3](Reto-03)
