@@ -1,18 +1,60 @@
-## Manipulando Dimensiones de Archivos 
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Reto-01
+## Comandos para preparar y contar conjuntos de datos
 
-### OBJETIVO 
- - Seleccionar columnas y renglones de archivos desde la consola además de usar múltiples comandos.
+### OBJETIVO
+- Analizar contenido de archivos
+- Preparar y formatear archivos a formatos conocidos (CSV, JSON)
+- Realizar conteo de resultados
 
-#### REQUISITOS 
-1. Consola 
+### REQUISITOS
+1. Git Bash instalado para equipos con Windows
+1. Carpeta de repositorio actualizada
+1. Ejemplo-01 terminado
 
-#### DESARROLLO
+### DESARROLLO
+1. Haz que tu carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-02/Reto-01/`
+   ```console
+   $ cd Introduccion-a-Bases-de-Datos/Sesion-02/Reto-01
+   Reto-01 $
+   ```
 
-Tomando como guía el ´Ejemplo-01´ sigue las siguientes instrucciones y realiza el Reto dentro de tu terminal.
+1. Copiar la carpeta `Datos` creada en el `Ejemplo-01` y moverse a la carpeta `Datos/ml-1m/`
+   ```console
+   Reto-01 $ ???
+   Reto-01 $ ls
+   Datos
+   Reto-01 $ cd Datos/ml-1m
+   ml-1m $
+   ```
 
-1. Descarga el siguiente archivo https://raw.githubusercontent.com/veekun/pokedex/master/pokedex/data/csv/pokemon.csv
-2. Muestra las primeras 20 líneas del csv
-3. Muestra las últimas 5 líneas del csv
-4. Regresa sólo los nombres de los pokemones y guárdalos en otro archivo nombrado pokenombres.txt
-5. Agrega un nuevo pokemon al nuevo archivo pokenombres.txt
-6. ¿Cuantos pokemones hay en pokenombres.txt?
+1. Convertir el archivo `movies.dat` al archivo `movies.csv` y `movies-h.csv` sin y con encabezado respectivamente.
+   ```console
+   ml-1m $ ???
+   ml-1m $ head -n 3 movies.csv
+   1,Toy Story (1995),Animation|Children's|Comedy
+   2,Jumanji (1995),Adventure|Children's|Fantasy
+   3,Grumpier Old Men (1995),Comedy|Romance
+   ml-1m $ ???
+   ml-1m $ head -n 3 movies-h.csv
+   id,titulo,genres
+   1,Toy Story (1995),Animation|Children's|Comedy
+   2,Jumanji (1995),Adventure|Children's|Fantasy
+   ml-1m $
+   ```
+
+1. Convertir el archivo `ratings.dat` al archivo `ratings.csv` y `ratings-h.csv` sin y con encabezado respectivamente.
+   ```console
+   ml-1m $ ???  # Comando para convertir
+   ml-1m $ ???  # Comando para verificar
+   1,1193,5,978300760
+   1,661,3,978302109
+   1,914,3,978301968   
+   ml-1m $ ???  # Comando para agregar encabezados
+   ml-1m $ ???  # Comando para validar
+   userid,movieid,ratings,time_stamp
+   1,1193,5,978300760
+   1,661,3,978302109
+   ml-1m $
+   ```
+
+__Reto cumplido__
