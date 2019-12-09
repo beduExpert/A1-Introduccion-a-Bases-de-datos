@@ -18,16 +18,16 @@
    ```
 
 1. Para conectarse a un servidor de bases de datos se necesitan cuando menos los siguientes datos:
-   - Host: Nombre del servidor o dirección IP que identifica al servidor de base de datos, si el servidor se encuentra en tu propio equipo entonces se puede usar el nombre `localhost` o la dirección IP `172.0.0.1`.
-   - Usuario: El usuario con el que se conectará al servidor.
-   - Clave: La clave asignada al usuario.
-   - Puerto: El número de puerto en el que el servidor atiende peticiones, por lo regular es el 3306.
+   - __Host:__ Nombre del servidor o dirección IP que identifica al servidor de base de datos, si el servidor se encuentra en tu propio equipo entonces se puede usar el nombre `localhost` o la dirección IP `172.0.0.1`.
+   - __Usuario:__ El usuario con el que se conectará al servidor.
+   - __Clave:__ La clave asignada al usuario.
+   - __Puerto:__ El número de puerto en el que el servidor atiende peticiones, por lo regular es el 3306.
 
    Solicita los datos de acceso a tu __Experta/o__, pero para ejemplificar se van a usar los siguientes datos:
-   - Host: ec2-54-213-193-78.us-west-2.compute.amazonaws.com
-   - Usuario: root
-   - Clave: root
-   - Puerto: 3306
+   - __Host:__ ec2-54-213-193-78.us-west-2.compute.amazonaws.com
+   - __Usuario:__ root
+   - __Clave:__ root
+   - __Puerto:__ 3306
 
 1. Abre una _Terminal_ (en Linux o Mac) o _Git bash_ (en Windows)
 
@@ -50,10 +50,13 @@
    Query OK, 1 row affected
    Time: 0.095s
    (none)>
+   ```
    El resultado indica que el comando se ejecutó de forma correcta, la cantidad de línea o renglones afectados y el tiempo de ejecución.
 
    __SUGERENCIA:__  Cuando este comando sea usado con scripts para automatizar tareas, se sugiere usar la siguiente variante:
-   ```CREATE DATABASE IF NOT EXISTS Nombre;```
+   ```
+   CREATE DATABASE IF NOT EXISTS Nombre;
+   ```
    para evitar que se marque un error en caso de que la base de dato ya exista y se intente crear de nuevo.
 
 1. Para mostrar la lista de bases de datos disponibles se hace uso del comando `SHOW DATABASES`
@@ -76,7 +79,7 @@
 1. Para borrar una base de datos se realiza con el comando  `DROP DATABASE Nombre`
    ```sql
    (none)> DROP DATABASE MiNombre;
-   You're about to run a destructive command.
+   Youre about to run a destructive command.
    Do you want to proceed? (y/n): y
    Your call!
    Query OK, 0 rows affected
@@ -96,7 +99,9 @@
    Después de eliminar la base de datos `MiNombre` se imprime la lista de bases de datos disponibles para validar que ya no existe.
 
    __SUGERENCIA:__  Cuando este comando sea usado con scripts para automatizar tareas, se sugiere usar la siguiente variante:
-   ```DROP DATABASE IF EXISTS Nombre;```
+   ```
+   DROP DATABASE IF EXISTS Nombre;
+   ```
    para evitar que se marque un error en caso de que la base de dato ya exista y se intente crear de nuevo.
 
 1. Como paso final entonces, se creará nuevamente la base de datos y se hará uso de ella como la base de datos actual, para ello se usará el comando `USE Nombre`
