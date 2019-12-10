@@ -90,12 +90,6 @@
 
 1. Abre otra _Terminal_ (en Linux o Mac) o _Anaconda Prompt_ (en Windows) para poder ejecutar el comando `mycli`. Si tienes otra ventana abierta sería bueno cerrarla para evitar confusiones.
 
-1. Hacer que la carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-03/Ejemplo-02/Datos/ml-1m/`
-   ```console
-   $ cd Introduccion-a-Bases-de-Datos/Sesion-03/Ejemplo-02/Datos/ml-1m
-   ml-1m $
-   ```
-
 1. Conectarse al Servidor MariaDB con los datos que has usado en el _Ejemplo-01_
    ```console
    ml-1m $ mycli -h ec2-54-213-193-78.us-west-2.compute.amazonaws.com -u root -p root -P 3306
