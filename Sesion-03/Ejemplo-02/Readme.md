@@ -3,8 +3,7 @@
 
 ### OBJETIVOS
  - Conocer las operaciones SQL para administrar tablas
- - Conocer las operaciones SQL para administrar datos
- - Relacionando datos y tablas
+ - Crear una tabla acorde a los datos
 
 ### REQUISITOS
 1. MyCli instalado
