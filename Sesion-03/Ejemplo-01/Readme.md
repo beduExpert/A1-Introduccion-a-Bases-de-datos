@@ -29,7 +29,7 @@
    - __Clave:__ root
    - __Puerto:__ 3306
 
-1. Abre una _Terminal_ (en Linux o Mac) o _Git bash_ (en Windows)
+1. Abre una _Terminal_ (en Linux o Mac) o _Anaconda Prompt_ (en Windows)
 
 1. Para realizar la conexión al Servidor MariaDB/MySQL se hará uso del comando `mycli -h nombre_servidor -u usuario -p clave -P puerto` (que ya debería estar instalado en tu sistema)
    ```console
