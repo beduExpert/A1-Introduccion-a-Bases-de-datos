@@ -154,7 +154,7 @@
    - __rating__ INT
    - __time_stamp__ BIGINT
 
-1. Crear la tabla `raitings` (recuerda usar el mismo nombre del archivo sin la extensión para vincular nombres de tablas con archivos)
+1. Crear la tabla `ratings` (recuerda usar el mismo nombre del archivo sin la extensión para vincular nombres de tablas con archivos)
 
    ```sql
    MiNombre> CREATE TABLE IF NOT EXISTS ratings (userid INT, movieid INT, rating INT, time_stamp BIGINT);
