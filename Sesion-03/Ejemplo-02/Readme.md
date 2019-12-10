@@ -1,10 +1,9 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Ejemplo-02
-## Realizando operaciones con tablas y datos
+## Realizando operaciones con tablas
 
 ### OBJETIVOS
  - Conocer las operaciones SQL para administrar tablas
- - Conocer las operaciones SQL para administrar datos
- - Relacionando datos y tablas
+ - Crear una tabla acorde a los datos
 
 ### REQUISITOS
 1. MyCli instalado
