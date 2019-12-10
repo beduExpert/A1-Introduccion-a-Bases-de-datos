@@ -1,5 +1,5 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 03`](../Readme.md) > Ejemplo-02
-## Realizando operaciones con tablas y datos
+## Realizando operaciones con tablas
 
 ### OBJETIVOS
  - Conocer las operaciones SQL para administrar tablas
