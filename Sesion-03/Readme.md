@@ -11,7 +11,7 @@
 ### ORGANIZACIÓN DE CLASE
 - Conectando con un Servidor MariaDB/MySQL y realizando operaciones con bases de datos
    - [Ejemplo 1](Ejemplo-01)
-- Realizando operaciones con tablas y datos
+- Realizando operaciones con tablas
    - [Ejemplo 2](Ejemplo-02)
    - [Reto 2](Reto-02)
 - Importando datos a una tabla en formato CSV
