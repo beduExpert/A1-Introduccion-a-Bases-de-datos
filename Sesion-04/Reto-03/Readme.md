@@ -1,49 +1,35 @@
-## Relacionando datos con SQL
+## Calculando datos con SQL
 
 ### OBJETIVO 
- - Combinar diferentes tablas para aumentar nuestros datos
+ - Hacer uso de funciones de SQL para hacer cálculos aritméticos
 
 #### REQUISITOS 
 1. MySQL Workbench
 2. BD MySQL
 
-#### DESARROLLO
-1. ¿Cuántos viajes se hicieron en Enero con una temperatura máxima menor a 15 centígrados?
-2. ¿Cuál es la edad promedio de los usuarios que usan el servicio en la temperatura más alta?
-3. ¿Cuál es la diferencia entre viajes cuando hace más frío que cuando hace más calor?
+1. ¿Cuántos ciclistas hombres usaron ecobici el 20 de Enero?
+2. ¿Cuál fue la temperatura promedio de todo el mes de Agosto?
+3. ¿Cuántos años tenía el viajero más viejo el 27 de Enero?
 
-#### SOLUCIÓN
-1. ¿Cuántos viajes se hicieron en Enero con una temperatura máxima menor a 15 centígrados?
+#### SOLUCION
+1. ¿Cuántos ciclistas hombres usaron ecobici el 20 de Enero?
 ```
-select count(*)
+select COUNT(*) AS "cant_ciclistas_hombres"
 from trips
-join clima on clima.dia = trips.Fecha_Retiro
-where temp_maxima < 15
+where Fecha_Retiro like '20%'
+and Genero_Usuario = 'M'
 ```
-2. ¿Cuál es la edad promedio de los usuarios que usan el servicio en la temperatura más alta?
+2. ¿Cuál fue la temperatura promedio de todo el mes de Agosto?
 ```
-SELECT AVG(Edad_Usuario)
-FROM trips
-         JOIN clima ON clima.dia = trips.Fecha_Retiro
-where clima.temp_maxima = (select MAX(temp_maxima)
-                           from trips
-                                    join clima on clima.dia = trips.Fecha_Retiro
-)
+select AVG(temp_media)
+from clima
 ```
-3. ¿Cuál es la diferencia entre viajes cuando hace más frío que cuando hace más calor?
+3. ¿Cuántos años tenía el viajero más viejo el 27 de Enero?
 ```
-SELECT (SELECT count(*)
-        FROM trips
-                 JOIN clima ON clima.dia = trips.Fecha_Retiro
-        where clima.temp_minima = (select MAX(temp_minima)
-                                   from trips
-                                            join clima on clima.dia = trips.Fecha_Retiro
-        )) - (SELECT count(*)
-              FROM trips
-                       JOIN clima ON clima.dia = trips.Fecha_Retiro
-              where clima.temp_maxima = (select MAX(temp_maxima)
-                                         from trips
-                                                  join clima on clima.dia = trips.Fecha_Retiro
-              )) AS "relacion_frio_caliente"
+select MAX(Edad_Usuario)
+from trips
+where Fecha_Retiro like '27%'
 ```
+
+
 
