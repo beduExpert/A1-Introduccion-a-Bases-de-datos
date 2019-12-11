@@ -77,6 +77,7 @@
    - __edad__ INT
    - __ocup__ INT
    - __cp__ VARCHAR(20)
+   
    Para ver una lista de todos los tipos de datos disponibles se puede consultar:
    - Tipos de datos en MariaDB https://mariadb.com/kb/en/library/data-types/
    - Tipos de datos en MySQL https://dev.mysql.com/doc/refman/8.0/en/data-types.html
