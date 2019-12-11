@@ -83,6 +83,23 @@
    Query OK, 1000209 rows affected
    Time: 678.410s
    MiNombre> SELECT * FROM ratings LIMIT 10;
+   +--------+---------+--------+------------+
+   | userid | movieid | rating | time_stamp |
+   +--------+---------+--------+------------+
+   | 1      | 1193    | 5      | 978300760  |
+   | 1      | 661     | 3      | 978302109  |
+   | 1      | 914     | 3      | 978301968  |
+   | 1      | 3408    | 4      | 978300275  |
+   | 1      | 2355    | 5      | 978824291  |
+   | 1      | 1197    | 3      | 978302268  |
+   | 1      | 1287    | 5      | 978302039  |
+   | 1      | 2804    | 5      | 978300719  |
+   | 1      | 594     | 4      | 978302268  |
+   | 1      | 919     | 4      | 978301368  |
+   +--------+---------+--------+------------+
+
+   10 rows in set
+   Time: 0.172s
    MiNombre>  
    ```
    Por lo que podemos corroborar que cuando menos los primeros 10 registros tienen información correcta.
