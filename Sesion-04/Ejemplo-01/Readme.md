@@ -1,13 +1,53 @@
 ## Calculando datos con SQL
 
-### OBJETIVO 
+### OBJETIVO
  - Hacer uso de funciones de SQL para hacer cálculos aritméticos
+ - Hacer uso de filtros como NOT, IN y LIKE
 
-#### REQUISITOS 
+#### REQUISITOS
 1. MySQL Workbench
 2. BD MySQL
 
 #### DESARROLLO
+1. Selecciona todos los viajes que no tengan usuarios con edades de 35, 20 y 18
+```
+SELECT *
+FROM trips
+WHERE Edad_Usuario not in (35, 20, 18)
+```
+2. Selecciona todos los viajes usuarios con edades de 35, 20 y 18 y que han usado las bicicletas 7486, 9299 y 7552
+```
+SELECT *
+FROM trips
+WHERE Edad_Usuario IN (35, 20, 18)
+AND Bici IN (7486, 9299, 7552)
+```
+3. Consulta el genero y edad del usuario en los viajes que terminaron a las 12 horas con x minutos
+```
+SELECT Genero_Usuario, Edad_Usuario
+FROM trips
+WHERE Hora_Arribo like '12%'
+```
+1. Selecciona todos los viajes con usuarios con edad arriba de 30
+```
+SELECT *
+FROM trips
+WHERE Edad_Usuario > 60
+```
+2. Selecciona todos los viajes empezados después de las 5 de la tarde hechos por una mujer
+```
+SELECT *
+FROM trips
+WHERE Hora_Retiro > '17:00:00'
+and Genero_Usuario = 'F'
+```
+3. Regresame los identificadores de las estaciones retiradas antes de las 8 de la mañana y después de las 5 de la tarde
+```
+SELECT Ciclo_Estacion_Retiro
+FROM trips
+WHERE Hora_Retiro > '17:00:00'
+OR Hora_Retiro < '8:00:00'
+```
 1. ¿Cuántos ciclistas mujeres usaron ecobici el 1ero de Enero?
 ```
 select COUNT(*) AS "cant_ciclistas_mujeres"
@@ -26,6 +66,3 @@ select MIN(Edad_Usuario)
 from trips
 where Fecha_Retiro like '15%'
 ```
-
-
-

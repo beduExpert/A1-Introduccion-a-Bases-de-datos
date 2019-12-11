@@ -1,4 +1,4 @@
-[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 01`](../Readme.md) > Postwork
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 02`](../Readme.md) > Postwork
 ## Postwork
 
 ### OBJETIVOS
