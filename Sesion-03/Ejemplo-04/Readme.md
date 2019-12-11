@@ -46,7 +46,7 @@
    MiNombre>  
    ```
    Se obtiene un total de 6040 registros, así que ahora se va a comparar con el número de líneas que hay en el archivo `users.csv`
--
+
 1. Abre otra _Terminal_ (en Linux o Mac) o _Git bash_ (en Windows), si tienes alguna otra ventana abierta con el comando `mycli` es buen momento para cerrarla antes de abrir la nueva ventana.
 
 1. Haz que tu carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-03/Ejemplo-04/`
