@@ -80,8 +80,8 @@
    No olvidar agregar la opción `FIELDS TERMINATED BY`:
    ```sql
    MiNombre> LOAD DATA LOCAL INFILE "ratings.csv" INTO TABLE ratings FIELDS TERMINATED BY ",";
-   Query OK, 3883 rows affected
-   Time: 6.410s
+   Query OK, 1000209 rows affected
+   Time: 678.410s
    MiNombre> SELECT * FROM ratings LIMIT 10;
    MiNombre>  
    ```
