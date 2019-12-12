@@ -5,6 +5,7 @@
 - Conocer algunas opciones de filtrado con las instrucción `SELECT`
 - Hacer uso de filtros como NOT, IN y LIKE
 - Hacer uso de operadores AND y OR
+- Obtener resultados a por medio de la ejecución de consultas SQL
 
 ### REQUISITOS
 1. MyCli instalado
