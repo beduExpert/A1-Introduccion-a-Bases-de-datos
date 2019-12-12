@@ -94,7 +94,7 @@
    Time: 0.000s
    MiNombre>  
    ```
-   Aunque el resultado se muestra en pantalla también se ha creado el archivo `users-lencp-desc.csv` y para comprobarlo, abre otra Terminal (Linuxo MacOSX) o Git Bash (para Windows) y has que tu carpeta de trabajo sea la del `Sesion-04/Ejemplo-02/`:
+   Aunque el resultado se muestra en pantalla también se ha creado el archivo `users-lencp-desc.csv` y para comprobarlo, abre otra Terminal (Linux o MacOSX) o Git Bash (para Windows) y has que tu carpeta de trabajo sea la del `Sesion-04/Ejemplo-02/`:
    ```console
    $ cd Introduccion-a-Bases-de-Datos/Sesion-04/Ejemplo-02
    Ejemplo-02 $
