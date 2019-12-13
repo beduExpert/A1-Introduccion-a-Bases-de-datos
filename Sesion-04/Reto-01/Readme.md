@@ -36,7 +36,7 @@
    Time: 0.093s
    MiNombre>  
    ```
-   Se revisa que al menos los primeros diéz resultado tengan el valor de `M` en el campo de `genero` y entonces se cuentan:
+   Se revisa que al menos los primeros diez resultado tengan el valor de `M` en el campo de `genero` y entonces se cuentan:
    ```sql
    MiNombre> SELECT COUNT(*) FROM users WHERE genero="M";
    +----------+
