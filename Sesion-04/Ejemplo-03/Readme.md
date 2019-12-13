@@ -41,7 +41,7 @@
    Time: 0.106s
    MiNombre>  
    ```
-   Este es el resultado esperado obteniendo la cuanta de ambos géneros con una sola consulta, aunque en este caso, no se obtiene la lista de los usuarios correspondiente.
+   Este es el resultado esperado obteniendo la cuenta de ambos géneros con una sola consulta, aunque en este caso, no se obtiene la lista de los usuarios correspondiente.
 
 1. Ahora también se quiere conocer la cantidad de usuarios que hay por cada una de las ocupaciones y ordenarlos de mayor a menor.
 
@@ -75,7 +75,11 @@
    ```
    Es importante notar que hay más resultados de los que se pueden mostrar, así que se presiona la letra `q` para continuar.
 
-   El resultado indica que la ocupación estudiantes universitarios son la que más participantes ha tenido.
+   El campo calculado de la cuenta `COUNT(ocup) AS total_ocup` en este caso se hace uso de la instrucción `AS` para nombrar al campo con `total_ocup`.
+
+   También es importante notar que la instrucción `GROUP BY` se aplica al campo `ocup`, mientras que la instrucción `ORDER BY` se aplica al campo calculado `total_ocup`.
+
+   El resultado indica que la ocupación con valor `4`, que corresponde a `estudiantes universitarios` (según el archivo README) es la que más participantes ha tenido, aunque los que no indicaron su ocupación también son una cantidad considerable.
 
 1. En el ejemplo anterior, la ocupación `4` fué la de mayor participación, ahora se desea obtener el rango de edades de los usuarios que participaron.
 
