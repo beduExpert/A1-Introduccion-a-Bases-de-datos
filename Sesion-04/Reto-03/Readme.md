@@ -82,7 +82,7 @@
    | 1265      | 2278           |
    :
    ```
-   El como el resultado es muy largo hay que presionar la tecla `q` para continuar.
+   Como el resultado es muy largo hay que presionar la tecla `q` para continuar.
 
    De los resultado se obtiene que la película con `movieid=2858` es la que más valoraciones ha tenido, pero ¿cuál es esa película? ¿podríamos agregar los nombres de las películas además de sólo el `movieid`?
 
