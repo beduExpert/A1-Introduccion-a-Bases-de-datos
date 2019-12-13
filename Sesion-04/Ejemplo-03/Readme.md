@@ -1,68 +1,96 @@
-## Calculando datos con SQL
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Ejemplo-03
+## Calculando datos haciendo uso de funciones en SQL
 
 ### OBJETIVO
- - Hacer uso de funciones de SQL para hacer cálculos aritméticos
- - Hacer uso de filtros como NOT, IN y LIKE
+- Hacer uso de funciones de SQL para hacer cálculos aritméticos
+- Hacer uso de la instrucción `GROUP BY`
+- Obtener resultados calculados y agrupados
 
-#### REQUISITOS
-1. MySQL Workbench
-2. BD MySQL
+### REQUISITOS
+1. Carpeta de repo actualizada
 
-#### DESARROLLO
-1. Selecciona todos los viajes que no tengan usuarios con edades de 35, 20 y 18
-```
-SELECT *
-FROM trips
-WHERE Edad_Usuario not in (35, 20, 18)
-```
-2. Selecciona todos los viajes usuarios con edades de 35, 20 y 18 y que han usado las bicicletas 7486, 9299 y 7552
-```
-SELECT *
-FROM trips
-WHERE Edad_Usuario IN (35, 20, 18)
-AND Bici IN (7486, 9299, 7552)
-```
-3. Consulta el genero y edad del usuario en los viajes que terminaron a las 12 horas con x minutos
-```
-SELECT Genero_Usuario, Edad_Usuario
-FROM trips
-WHERE Hora_Arribo like '12%'
-```
-1. Selecciona todos los viajes con usuarios con edad arriba de 30
-```
-SELECT *
-FROM trips
-WHERE Edad_Usuario > 60
-```
-2. Selecciona todos los viajes empezados después de las 5 de la tarde hechos por una mujer
-```
-SELECT *
-FROM trips
-WHERE Hora_Retiro > '17:00:00'
-and Genero_Usuario = 'F'
-```
-3. Regresame los identificadores de las estaciones retiradas antes de las 8 de la mañana y después de las 5 de la tarde
-```
-SELECT Ciclo_Estacion_Retiro
-FROM trips
-WHERE Hora_Retiro > '17:00:00'
-OR Hora_Retiro < '8:00:00'
-```
-1. ¿Cuántos ciclistas mujeres usaron ecobici el 1ero de Enero?
-```
-select COUNT(*) AS "cant_ciclistas_mujeres"
-from trips
-where Fecha_Retiro like '01%'
-and Genero_Usuario = 'F'
-```
-2. ¿Cuál es el promedio de la edad de los ciclistas?
-```
-select AVG(Edad_Usuario)
-from trips
-```
-3. ¿Cuántos años tenía el viajero más joven el 15 de Enero?
-```
-select MIN(Edad_Usuario)
-from trips
-where Fecha_Retiro like '15%'
-```
+### DESARROLLO
+1. Activa la _Terminal_ (en Linux o Mac) o _Anaconda Prompt_ (en Windows) donde se tiene el comando `mycli`.
+
+1. En la `Sesion-03` se obtuvieron la cantidad de usuarios de diferente género por separado, ahora se obtendrá la cantidad de usuarios por cada género disponible.
+
+   Para obtener el resultado se hará usando la instrucción SQL `GROUP BY nombre-de-campo` y la consulta es la siguiente:
+   ```sql
+   MiNombre> SELECT * FROM users GROUP BY genero;
+   +------+----------+--------+--------+-------+
+   | id   | genero   | edad   | ocup   | cp    |
+   |------+----------+--------+--------+-------|
+   | 1    | F        | 1      | 10     | 48067 |
+   | 2    | M        | 56     | 16     | 70072 |
+   +------+----------+--------+--------+-------+
+
+   2 rows in set
+   Time: 0.223s
+   MiNombre>  
+   ```
+   El resultado sólo consiste de dos filas, cada una con un género diferente, el resto de las columnas son los datos que complementan a cada registro, pero en este caso la fila con `genero=F` representa a todos los registros que tienen género femenino y la fila con `genero=M` representa a todos los registros con género masculino y como nos interesa la cantidad de cada uno, entonces se puede aplicar la función `COUNT(genero)` y también sólo mostrar los campos que se necesitan, entonces la consulta resultante es:
+   ```sql
+   MiNombre> SELECT genero, COUNT(genero) FROM users GROUP BY genero;              
+   +----------+-----------------+
+   | genero   | COUNT(genero)   |
+   |----------+-----------------|
+   | F        | 1709            |
+   | M        | 4331            |
+   +----------+-----------------+
+   2 rows in set
+   Time: 0.106s
+   MiNombre>  
+   ```
+   Este es el resultado esperado obteniendo la cuanta de ambos géneros con una sola consulta, aunque en este caso, no se obtiene la lista de los usuarios correspondiente.
+
+1. Ahora también se quiere conocer la cantidad de usuarios que hay por cada una de las ocupaciones y ordenarlos de mayor a menor.
+
+   Nuevamente para esta solución se hace uso del las instrucciones `GROUP BY` y `ORDER BY` combinadas:
+   ```sql
+   MiNombre> SELECT ocup, COUNT(ocup) AS total_ocup FROM users GROUP BY ocup ORDER BY total_ocup DESC;
+   +--------+--------------+
+   | ocup   | total_ocup   |
+   |--------+--------------|
+   | 4      | 759          |
+   | 0      | 711          |
+   | 7      | 679          |
+   | 1      | 528          |
+   | 17     | 502          |
+   | 12     | 388          |
+   | 14     | 302          |
+   | 20     | 281          |
+   | 2      | 267          |
+   | 16     | 241          |
+   | 6      | 236          |
+   | 10     | 195          |
+   | 3      | 173          |
+   | 15     | 144          |
+   | 13     | 142          |
+   | 11     | 129          |
+   | 5      | 112          |
+   | 9      | 92           |
+   | 19     | 72           |
+   | 18     | 70           |
+   :
+   ```
+   Es importante notar que hay más resultados de los que se pueden mostrar, así que se presiona la letra `q` para continuar.
+
+   El resultado indica que la ocupación estudiantes universitarios son la que más participantes ha tenido.
+
+1. En el ejemplo anterior, la ocupación `4` fué la de mayor participación, ahora se desea obtener el rango de edades de los usuarios que participaron.
+
+   Para la solución se hará uso de las funciones SQL `MIN()` y `MAX()` y su uso se muestra en la siguiente consulta:
+   ```sql
+   MiNombre> SELECT MIN(edad), MAX(edad) FROM users WHERE ocup=4;
+   +-------------+-------------+
+   | MIN(edad)   | MAX(edad)   |
+   |-------------+-------------|
+   | 1           | 50          |
+   +-------------+-------------+
+   1 row in set
+   Time: 0.117s
+   MiNombre>  
+   ```
+   Con lo que se obtiene que el rango de edades van desde menores de edad hasta los 55 años.
+
+__Misión cumplida__
