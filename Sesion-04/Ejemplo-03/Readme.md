@@ -95,6 +95,6 @@
    Time: 0.117s
    MiNombre>  
    ```
-   Con lo que se obtiene que el rango de edades van desde menores de edad hasta los 55 años.
+   Con lo que se obtiene que el rango de edades van desde menores de edad hasta los 55 años para usuarios cuya ocupación es `estudiantes universitarios`.
 
 __Misión cumplida__
