@@ -1,20 +1,71 @@
-## Relacionando datos con SQL
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Reto-03
+## Calculando datos haciendo uso de funciones en SQL
 
-### OBJETIVO 
- - Combinar diferentes tablas para aumentar nuestros datos
+### OBJETIVO
+- Hacer uso de funciones de SQL para hacer cálculos aritméticos
+- Hacer uso de la instrucción `GROUP BY`
+- Obtener resultados calculados y agrupados
 
-#### REQUISITOS 
-1. MySQL Workbench
-2. BD MySQL
+### REQUISITOS
+1. Carpeta de repo actualizada
 
-#### DESARROLLO
+### DESARROLLO
+1. Activa la _Terminal_ (en Linux o Mac) o _Anaconda Prompt_ (en Windows) donde se tiene el comando `mycli`.
 
-Tomando como guía el `Ejemplo-01` sigue las instrucciones y realiza el Reto dentro de `MySQL Workbench`.
+1. Se quiere conocer la cantidad de usuarios que hay por cada rango de edades y ordenarlos de mayor a menor y comentar resultados.
 
-> **Recuerda**: Inicializar el contenedor de docker donde estaremos trabajando.  
+   Nuevamente para esta solución se hace uso del las instrucciones `GROUP BY` y `ORDER BY` combinadas:
+   ```sql
+   MiNombre> ???
+   +--------+--------------+
+   | edad   | total_edad   |
+   |--------+--------------|
+   ???
+   ???
+   ???
+   ...
+   +--------+--------------+
+   7 rows in set
+   Time: 0.110s
+   MiNombre>  
+   ```
+   Al ver los resultados se podría decir que ¿es un resultado esperado?
 
-Lee siguientes preguntas y ejecuta el código necesario de SQL en `MySQL Workbench` para respónderlas. 
+1. Se desea conocer la distribución de la cantidad de películas por cada valoración (de 1 a 5) en la tabla `ratings`
 
-1. ¿Cuántos viajes se hicieron en Enero con una temperatura máxima menor a 15 centígrados?
-2. ¿Cuál es la edad promedio de los usuarios que usan el servicio en la temperatura más alta?
-3. ¿Cuál es la diferencia entre viajes cuando hace más frío que cuando hace más calor?
+   La solución implica nuevamente el uso de la instrucción `GROUP BY` con la siguiente consulta:
+   ```sql
+   MiNombre> ???
+   +----------+----------------+
+   | rating   | total_rating   |
+   |----------+----------------|
+   ???
+   ???
+   ???
+   ...
+   +----------+----------------+
+   5 rows in set
+   Time: 0.554s
+   MiNombre>  
+   ```
+   Con el resultado obtenido se puede decir que en general los usuarios gustan de las películas seleccionadas, ya que las mayores valoraciones fueron de `3, 4 y 5`
+
+1. Se desea conocer la cantidad de valoraciones que se realizó a cada película en la tabla `ratings`
+   ```sql
+   MiNombre> ???
+   +-----------+----------------+
+   | movieid   | total_rating   |
+   |-----------+----------------|
+   ???
+   ???
+   ???
+   ...
+   :
+   ```
+   Como el resultado es muy largo hay que presionar la tecla `q` para continuar.
+
+   De los resultado se obtiene que la película con `movieid=2858` es la que más valoraciones ha tenido, pero ¿cuál es esa película? ¿podríamos agregar los nombres de las películas además de sólo el `movieid`?
+
+   Responderemos esas preguntas en el siguiente `Ejemplo`.
+
+__Misión cumplida__
