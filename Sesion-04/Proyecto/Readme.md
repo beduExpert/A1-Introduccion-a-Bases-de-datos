@@ -43,4 +43,11 @@
    MiNombre>  
    ```
 
+1. Del resultado anterior indica cuantos usuarios femenino y masculino realizaron valoraciones.
+   
+   Y el total se otiene con:
+   ```sql
+   MiNombre> ???
+   ```
+
 __Misión cumplida__
