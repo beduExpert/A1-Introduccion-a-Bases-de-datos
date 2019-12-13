@@ -87,6 +87,8 @@
            * 50:  "50-55"
            * 56:  "56+"   
    ```
+   __Nota:__ Para esta sesión el archivo `README` se puede encontrar en la carpeta `Sesion-04/Datos/ml-1m/`. Si aún no cuentas con la carpeta `Datos` es buen monento para copiarla.
+
    Así que todos los registros con valor 1 en edad significa que son menores de edad y no que tienen 1 año de nacidos (que alivio, los datos son de calidad!), así que la consulta es la siguiente:
    ```sql
    MiNombre> SELECT * FROM users WHERE edad=1 LIMIT 10;
@@ -189,6 +191,8 @@
            * 19:  "unemployed"
            * 20:  "writer"
    ```
+   __Recuerda:__ El archivo `README` se puede encontrar en la carpeta `Sesion-04/Datos/ml-1m/`.
+
    Así que se usaran los valores de 10 y 19 para buscarlos en la columna de ocupación.
 
    Ahora se hará uso del operador `IN` junto con las instrucción `SELECT`:
