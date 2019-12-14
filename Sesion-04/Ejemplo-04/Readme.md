@@ -49,7 +49,8 @@
    | 2126 | Snake Eyes (1998)          | Action|Crime|Mystery|Thriller    | 3      |
    | 292  | Outbreak (1995)            | Action|Drama|Thriller            | 3      |
    | 3256 | Patriot Games (1992)       | Action|Thriller                  | 2      |
-   | 2278 | Ronin (1998)               | Action|Crime|Thriller            | 3      :
+   | 2278 | Ronin (1998)               | Action|Crime|Thriller            | 3      
+   :
    ```
    __Nota:__ El resultado puede demorar un poco, ya que se están procesando más de 20 millones de registros.
 
@@ -173,7 +174,8 @@
    | 3202     | 2722      | 5        | 968573704    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 3202 | F        | 18     | 4      | 24060 |
    | 3483     | 2722      | 5        | 967494828    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 3483 | F        | 45     | 7      | 30260 |
    | 4278     | 2722      | 5        | 965289897    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 4278 | F        | 45     | 7      | 09094 |
-   | 4504     | 2722      | 5        | 965011706    | 2722 | Deep Blue Sea (1999) |:
+   | 4504     | 2722      | 5        | 965011706    | 2722 | Deep Blue Sea (1999) |
+   :
    ```
    __Nota:__ Se recomienda ir construyendo la consulta paso a paso e ir observando los resultados generados.
 
