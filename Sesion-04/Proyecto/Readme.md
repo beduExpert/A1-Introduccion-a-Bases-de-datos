@@ -11,40 +11,42 @@
 ### DESARROLLO
 1. Activa la _Terminal_ (en Linux o Mac) o _Anaconda Prompt_ (en Windows) donde se tiene el comando `mycli`.
 
-1. Imprime la lista de todas las películas de acción que obtuvieron una valoración de 5 e indica cuantas son.
+1. Imprime la lista de todas las películas de acción que obtuvieron una valoración de 5.
 
-   La solución necesita hacer uso de la instrucción `JOIN`:
+   La solución necesita hacer uso de la instrucción `JOIN` y relacionar las tablas `movies` y `ratings`:
    ```sql
-   MiNombre> SELECT movies.* FROM ratings LEFT JOIN movies ON movieid=movies.id WHE
-             RE genres LIKE "Action%" AND rating=5;                                
-   +------+---------------------------------------------------------------------+------------------------------------------+
-   | id   | title                                                               | genres                                   |
-   |------+---------------------------------------------------------------------+------------------------------------------|
-   | 1287 | Ben-Hur (1959)                                                      | Action|Adventure|Drama                   |
-   | 2028 | Saving Private Ryan (1998)                                          | Action|Drama|War                         |
-   | 3578 | Gladiator (2000)                                                    | Action|Drama                             |
-   | 110  | Braveheart (1995)                                                   | Action|Drama|War                         |
-   | 480  | Jurassic Park (1993)                                                | Action|Adventure|Sci-Fi                  |
-   | 1370 | Die Hard 2 (1990)                                                   | Action|Thriller                          |
-   | 1196 | Star Wars: Episode V - The Empire Strikes Back (1980)               | Action|Adventure|Drama|Sci-Fi|War        |
-   | 1954 | Rocky (1976)                                                        | Action|Drama                             |
-   | 380  | True Lies (1994)                                                    | A:
+   MiNombre> SELECT DISTINCT id, title FROM ratings LEFT JOIN movies ON movieid=movies.id WHERE genres LIKE "Action%" AND rating=5 ORDER BY movieid;
+   +------+---------------------------------------------------------------------+
+   | id   | title                                                               |
+   +------+---------------------------------------------------------------------+
+   | 6    | Heat (1995)                                                         |
+   | 9    | Sudden Death (1995)                                                 |
+   | 10   | GoldenEye (1995)                                                    |
+   | 15   | Cutthroat Island (1995)                                             |
+   | 21   | Get Shorty (1995)                                                   |
+   | 42   | Dead Presidents (1995)                                              |
+   | 44   | Mortal Kombat (1995)                                                |
+   | 70   | From Dusk Till Dawn (1996)                                          |
+   | 71   | Fair Game (1995)                                                    |
+   | 89   | Nick of Time (1995)                                                 |
+   | 95   | Broken Arrow (1996)                                                 |
+   | 110  | Braveheart (1995)                                                   |
+   | 112  | Rumble in the Bronx (1995)                                          |
+   | 145  | Bad Boys (1995)                                                     |
+   | 153  | Batman Forever (1995)                                               |
+   | 160  | Congo (1995)                                                        |
+   | 163  | Desperado (1995)                                                    |
+   | 165  | Die Hard: With a Vengeance (1995)                                   |
+   | 168  | First Knight (1995)                                                 |
+   | 170  | Hackers (1995)                                                      |
+   :
    ```
-   Y el total se otiene con:
-   ```sql
-   MiNombre> SELECT COUNT(*) FROM ratings LEFT JOIN movies ON movieid=movies.id WHERE genres LIKE "Action%" AND rating=5;
-   +------------+
-   | COUNT(*)   |
-   |------------|
-   | 37112      |
-   +------------+
-   1 row in set
-   Time: 0.855s
-   MiNombre>  
-   ```
+   Se recomienda construir la consulta paso a paso hasta obtener el resultado solicitado, además de hacer uso de la instrucción `DISTINCT`
 
-1. Del resultado anterior indica cuantos usuarios femenino y masculino realizaron valoraciones.
-   
+   Para corroborar que tu resultado es correcto, `mycli` debe indicar que hay 342 registros en el resultado.
+
+1. De la consulta en el punto anterior indica cuantos usuarios femenino y masculino realizaron valoraciones a películas del género acción y con una valoración de 5.
+
    Y el total se otiene con:
    ```sql
    MiNombre> ???
