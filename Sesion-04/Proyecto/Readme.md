@@ -103,7 +103,7 @@
    ```
    El resultado ya nos comienza a mostrar datos interesantes, posiblemente obtener este tipo de resultados, pero no mezclando categorías, si no, por cada una de las categorías, para así conocer por cada género cual es la película con más y menos valoraciones.
 
-1. Del `Ejemplo` anterior se obtuvo que la película `American Beauty` es la que más valoraciones obtuvo (3428), ahora se quiere conocer cual es la distribución de esas valoraciones, en otras palabras, cuantas son 1, cuantas son 2, etc.
+1. Del `Ejemplo-04` se obtuvo que la película `American Beauty` es la que más valoraciones obtuvo (3428), ahora se quiere conocer cual es la distribución de esas valoraciones, en otras palabras, cuantas son 1, cuantas son 2, etc.
 
    Se inicia con la tabla `movies` para poder obtener el `id` de la película:
    ```sql
