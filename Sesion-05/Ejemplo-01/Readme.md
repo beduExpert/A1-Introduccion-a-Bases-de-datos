@@ -1,56 +1,59 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-01
-## Instalación y ejecución de MongoDB
+## Conectando con un Servidor MongoDB y realizando operaciones con bases de datos
 
 ### OBJETIVO
-- Que el alumno aprenda a instalar MongoDB
-- Que el alumno inicie un servidor de MondoDB
+- Que el alumno se conecte a un servidor MongoDB
+- Que el alumno realice operaciones con bases de datos
+- Que el alumno cuente con una base de datos para trabajar
 
 ### REQUISITOS
 1. Repositorio actualizado
+1. MongoDB Compass instalado
+1. Datos de conexión al Servidor MongoDB
 1. Usar la carpeta de trabajo `Sesion-05/Ejemplo-01`
 
 ### DESARROLLO
-1. Entra a la [Página Oficial de Descarga de MongoDB](https://www.mongodb.com/download-center/community)
+1. Ejecutar __MongoDB Compass__ y esperar hasta observar una ventana similar a la siguiente.
 
-   1. Selecciona __Server__
-   1. Secciona tu sistema operativo (Linux, Mac o Windows)
-   1. Dá click en __Download__
+   ![Compass corriendo](assets/compass-corriendo.png)
 
-   Alternativamente para Linux y MacOS puedes también agregar las librerías de MongoDB con su menajador de paquetes (apt, yum, brew, etc.)
+   Se tiene que hacer uso de los datos de conexión proporcionados por tu Experta/o y para efectos de demostración se usarán los siguientes:
+   - __Hostname:__  ec2-54-213-193-78.us-west-2.compute.amazonaws.com
+   - __Port:__ 27017
+   - __Authentication:__ Username / Password
+   - __Username:__ root
+   - __Password:__ bedu
+   - __Authetication Database:__ admin
 
-   https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu
+   Una vez ajustados los datos presiona el botón __CONNECT__ que hará que __Compass__ se conecte a nuestro servidor local de MongoDB:
 
-   También alternativamente para MacOS puedes instalar MongoDB usando `brew`, si deseas seguir este camino, puedes revisar las instrucciones en el siguiente enlace:
+   ![Compass conectado a servidor local](assets/compass-conectado.png)
+   Y lo que aparece a la izquierda detalles de la conexión realizada y en la parte inferior la lista de las bases de datos disponibles, a la derecha es una lista de las mismas bases de datos:
+   - admin
+   - config
+   - local
+   estas bases de datos son necesarias para el funcionamiento interno de MongoDB, así que de preferencia no las uses ni las modifiques.
 
-   https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+1. En la ventana de __MongoDB Compass__ presionar el botón __CREATE DATABASE__ y crear la base de datos __MiNombre__ con la colección __users__, se tiene que definir el nombre de la primera colección para que se pueda crear la base de datos.
 
-1. Instalación para GNU/Linux
+   En lugar de __MiNombre__ utiliza tu nombre y primer apellido para nombrar a tu base de datos, ya que tu base de datos y la de tus compañeros serán creadas en el mismo servidor.
 
-   1. Ejecuta el instalador dando doble click en el archivo `.deb`, `.rpm` o el que hayas descargando para tu distribución de Linux.
-   1. Se abrirá el asistente de instalación de software, entonces da click en el botón __Instalar paquete__
-      ![Asistente de instalación linux](assets/linux-asistente-instalacion.png)
-   1. Terminar la instalación y cerrar las ventanas
-   1. Para iniciar el servidor de MongoDB abre una terminal y ejecuta lo siguiente:
-   ```console
-   $ sudo service mongod start
-   ```
+   ![Creando base de datos](assets/creando-basededatos.png)
+   Una vez llenado los datos, presionar el botón __CREATE DATABASE__
 
-1. Instalación para Windows
+   Se deberá ver nuestra nueva base de datos en la lista:
+   ![Lista de bases de datos](assets/lista-basededatos.png)
 
-   1. Ejecuta el instalador dando doble click en el archivo `.msi`
-   1. Selecciona la opción __Complete__
-   1. Selecciona la opción __MongoDB Service__
-   1. Selecciona la opción __Run the service as Network Service user__
-   1. Deja los campos: __Service Name__, __Data Directory__ y __Log Directory__ como vengan predeterminados.
-   1. Terminar instalación
-   1. Crear la carpeta `C:|data\db` usando el explorador de archivos.
+1. Para eliminar una base de datos se dá click en el icono de bote de basura al final de la línea, entonces aparece un diálogo preguntando por el nombre de la base de datos a eliminar, así que se escribe el nombre, en este caso `MiNombre` y se presiona el botón rojo `DROP DATABASE`
 
-1. Instalación y ejecución para MacOS
+   ![Borrando una base de datos](assets/eliminando-basededatos.png)
+   `MongoDB Compass` se actualiza en automático y la bases de datos `MiNombre` ya no aparece en la lista.
 
-   1. Descomprime el archivo `.tgz` dando dobel click sobre el, esto creará una carpeta.
-   1. Copia la carpeta que se descomprimió a esta ruta `/usr/local/bin`
-   1. Crea la carpeta `/data/db/` y asegurate de tener permisos de escritura
-   1. Para iniciar el servidor de MongoDB abre una terminal y ejecuta lo siguiente:
-   ```console
-   $ mongod
-   ```
+   Así que crea nuevamente la base de datos `MiNombre` con la colección `users`.
+
+1. Para hacer uso de la base de datos __MiNombre__ dar click en el nombre y se obtendrá la lista de colecciones disponibles:
+
+   ![Lista de colecciones](assets/lista-colecciones.png)
+   Se trabajará con Colecciones en el siguiente ejemplo.
+
+__Misión cumplida__
