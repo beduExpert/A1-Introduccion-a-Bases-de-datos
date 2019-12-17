@@ -1,15 +1,15 @@
 [`Fundamentos de Base de Datos`](../Readme.md) > `Sesión 05`
-## Fundamentos de MongoDB.
+## Fundamentos de MongoDB e importación de datos
 
 ### OBJETIVOS
-- Que el alumno instale y ejecute comandos de MongoDB
-- Que el alumno comprenda y se familiarice con una base de datos no estructurada (NoSql)
+- Que el alumno comprenda y se familiarice con una base de datos NoSQL
+- Que el alumno aprenda a importar datos en formato CSV
 
 ### ORGANIZACION DE LA CLASE
-- Instalación y ejecución de MongoDB
+- Conectando con un Servidor MongoDB y realizando operaciones con bases de datos
 	- [Ejemplo 01](Ejemplo-01)
-- Conexión a MongoDB desde un cliente
-	- [Ejemplo 02](Ejemplo-02)
+- Realizando operaciones con Colecciones
+
 - Configuración de la base de datos
 	- [Ejemplo 03](Ejemplo-03)
 	- [Reto 03](Reto-03)
