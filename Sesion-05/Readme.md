@@ -19,5 +19,5 @@
    - [Proyecto](Proyecto)
 
 ### POSTWORK
- - Usando datos en formato CSV relacionado con MongoDB
+ - Usando datos en formato CSV con MongoDB
    - [Ver lineamientos](Postwork)
