@@ -1,4 +1,4 @@
-[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-05
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-03
 ## Realizando operaciones con Documentos
 
 ### OBJETIVO
