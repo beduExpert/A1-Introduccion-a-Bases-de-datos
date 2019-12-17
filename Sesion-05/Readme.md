@@ -11,16 +11,13 @@
 - Realizando operaciones con Colecciones e importando datos
 	 - [Ejemplo 02](Ejemplo-02)
 	 - [Reto 02](Reto-02)
-
-- Configuración de la base de datos
-	- [Ejemplo 03](Ejemplo-03)
-	- [Reto 03](Reto-03)
-- Creando objetos e insertando datos
-  - [Ejemplo 04](Ejemplo-04)
-  - [Reto 04](Reto-04)
-- Importando datos
-  - [Proyecto](Proyecto)
+- Realizando operaciones con Documentos
+   - [Ejemplo 03](Ejemplo-03)
+   - [Reto 03](Reto-03)
+- Filtrando y contando Documentos en una Colección
+   - [Ejemplo 04](Ejemplo-04)
+   - [Proyecto](Proyecto)
 
 ### POSTWORK
- - Bases de datos no relacionales con MongoDB aplicado a tú Proyecto.
+ - Usando datos en formato CSV relacionado con MongoDB
    - [Ver lineamientos](Postwork)
