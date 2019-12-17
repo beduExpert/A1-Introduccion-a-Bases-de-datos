@@ -76,6 +76,7 @@ A continuación se realizaran algunas operaciones de agregar, modificar y elimin
    Luego de presionar el botón __INSERT__ la lista de los dos documentos deberá de ser la siguiente:
 
    ![Lista de documentos en la colección](assets/documentos-en-coleccion-2.png)
+   Trabajar con Documentos JSON después de trabajar con SQL puede ser un poco confuso, así que siéntete libre de solicitar ayuda si algo no queda según lo requerido.
 
 1. Finalmente elimina ambos documentos, quedando la lista de documentos final como la siguiente:
 
