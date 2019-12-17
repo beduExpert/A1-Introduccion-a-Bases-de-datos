@@ -4,7 +4,7 @@
 ### OBJETIVO
 - Que el alumno agregue __Documentos__ en una __Colección__
 - Que el alumno modifique __Documentos__ en una __Colección__
-- Que el alumno elimine __Documentos en una __Colección__
+- Que el alumno elimine __Documentos en una Colección__
 - Que el alumno comprenda la estructura de documentos de una base de datos __MongoDB__
 
 ### REQUISITOS
