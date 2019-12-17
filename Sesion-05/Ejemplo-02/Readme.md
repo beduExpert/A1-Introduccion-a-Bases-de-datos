@@ -1,5 +1,5 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-02
-## Realizando operaciones con Colecciones
+## Realizando operaciones con Colecciones e importando datos
 
 ### OBJETIVO
 - Que el alumno realice operaciones con Colecciones
