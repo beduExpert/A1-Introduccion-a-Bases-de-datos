@@ -32,7 +32,8 @@
    - admin
    - config
    - local
-   estas bases de datos son necesarias para el funcionamiento interno de MongoDB, así que de preferencia no las uses ni las modifiques.
+
+   Estas bases de datos son necesarias para el funcionamiento interno de MongoDB, así que de preferencia no las uses ni las modifiques.
 
 1. En la ventana de __MongoDB Compass__ presionar el botón __CREATE DATABASE__ y crear la base de datos __MiNombre__ con la colección __users__, se tiene que definir el nombre de la primera colección para que se pueda crear la base de datos.
 
