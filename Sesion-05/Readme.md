@@ -7,8 +7,10 @@
 
 ### ORGANIZACION DE LA CLASE
 - Conectando con un Servidor MongoDB y realizando operaciones con bases de datos
-	- [Ejemplo 01](Ejemplo-01)
-- Realizando operaciones con Colecciones
+	 - [Ejemplo 01](Ejemplo-01)
+- Realizando operaciones con Colecciones e importando datos
+	 - [Ejemplo 02](Ejemplo-02)
+	 - [Reto 02](Reto-02)
 
 - Configuración de la base de datos
 	- [Ejemplo 03](Ejemplo-03)
