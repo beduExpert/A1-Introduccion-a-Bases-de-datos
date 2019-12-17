@@ -1,10 +1,10 @@
-[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-05
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-03
 ## Realizando operaciones con Documentos
 
 ### OBJETIVO
 - Que el alumno agregue __Documentos__ en una __Colección__
 - Que el alumno modifique __Documentos__ en una __Colección__
-- Que el alumno elimine __Documentos en una __Colección__
+- Que el alumno elimine __Documentos en una Colección__
 - Que el alumno comprenda la estructura de documentos de una base de datos __MongoDB__
 
 ### REQUISITOS
@@ -49,6 +49,7 @@ A continuación se realizaran las operaciones de agregar, modificar y eliminar u
    Ahora regresemos a __MongoDB Compass__ y agregemos estos campos:
 
    ![Adicionando campos u objetos](assets/adicionando-datos.png)
+   
    Aunque en el diálogo se puede elegir el tipo de dato correcto para cada caso, todos los campos se importan como cadenas de texto porque así es como se realiza en la importación de datos. Nota que el campo `_id` no es necesario agregarlo, ya que __MongoDB Compass__ lo agrega de forma automática y es la manera en que se crea un identificador único para cada Documento.
 
    Al final presionar el botón __INSERT__
