@@ -14,7 +14,7 @@
 - Realizando operaciones con Documentos
    - [Ejemplo 03](Ejemplo-03)
    - [Reto 03](Reto-03)
-- Filtrando y contando Documentos en una Colección
+- Filtrando Documentos en una Colección
    - [Ejemplo 04](Ejemplo-04)
    - [Proyecto](Proyecto)
 
