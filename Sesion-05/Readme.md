@@ -4,6 +4,7 @@
 ### OBJETIVOS
 - Que el alumno comprenda y se familiarice con una base de datos NoSQL
 - Que el alumno aprenda a importar datos en formato CSV
+- Que el alumno realice consultas por medio de filtrado de datos
 
 ### ORGANIZACION DE LA CLASE
 - Conectando con un Servidor MongoDB y realizando operaciones con bases de datos
@@ -19,5 +20,4 @@
    - [Proyecto](Proyecto)
 
 ### POSTWORK
- - Usando datos en formato CSV con MongoDB
-   - [Ver lineamientos](Postwork)
+- [Ver lineamientos](Postwork)
