@@ -1,53 +1,64 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 05`](../Readme.md) > Ejemplo-04
-## Configuración de la base de datos
+## Filtrando Documentos en una Colección
 
 ### OBJETIVO
-- Que el alumno cree __Documentos__ en una __Colección__
-- Que el alumno modifique __Documentos__ en una __Colección__
-- Que el alumno elimine __Documentos en una __Colección__
+- Que el alumno conozca la forma de filtrar Documentos en una Colección
+- Que el alumno obtenga resultados a preguntas generadas
 
 ### REQUISITOS
 1. Repositorio actualizado
 1. Usar la carpeta de trabajo `Sesion-05/Ejemplo-04`
-1. __Compass__ iniciado y conectado al servidor local de MongoDB
-1. Base de datos __Ecobici__ creada
+1. __MongoDB Compass__ iniciado y conectado al servidor de MongoDB
+1. Base de datos __MiNombre__ y Colecciones `users`, `movies` y `ratings` creadas
 
 ### DESARROLLO
-1. Para crear un documento, dar click sobre la base de datos __Ecobici__, luego dar click sobre la colección __Recorrido__ y entonces dar click sobre el botón __INSERT DOCUMENT__:
+Se comenzará a crear algunas consultas similares a las creadas en SQL pero usando las herramientas de MongoDB usando el mismo conjunto de datos, más adelante se harán usado de datos no estructurados.
 
-   ![Insertando un documento](assets/insertando-documento.png)
-   Esto abrirá un diálogo que nos permite agregar los datos o campos u objetos que conformarán nuestro documento en notación JSON
+1. La primer consulta consiste en obtener la lista de todos los usuarios con género femenino de la colección `users`, limitar el resultado a 10 documentos para agilizar la obtención del resultado:
 
-   ![Adicionando campos u objetos](assets/adicionando-datos.png)
-   Agregar los datos que se muestran en la imagen, teniendo cuidado de elegir el tipo de dato correcto para cada caso. Nota que el campo `_id` no es necesario agregarlo, pero __Compass__ lo agregar por nosotros para ya que es una buena práctica contar con un identificar único para cada registro.
+   En la barra de `FILTER` se coloca la siguiente expresión:
+   ```json
+   {gen: "F"}
+   ```
+   Esta es una condición que indica seleccionar todo los documentos donde el campo `gen` tenga el valor `F`, el resultado es como el siguiente:
+   ![Filtrado género femenino](assets/filtrado-genfem-01.png)
 
-   Al final presionar el botón __INSERT__ lo que deberá mostrar el documento ya inserado en la colección:
+   En este caso con una sola consulta se ha obtenido que el número de documentos con género femenino es de 1709, también se puede ver una muestra del resultado, donde se puede corroborar que todos los documentos tienen género `F`
 
-   ![Documentos en la colección](assets/documentos-en-coleccion.png)
+   Ahora sólo falta limitar el número de documentos, para ello se da click en el botón `OPTIONS` y luego se ajusta el valor de `LIMIT` a 10 y se presiona el botón de `FIND` obteniendo el siguiente resultado:
+   ![Limitando número de resultados](assets/filtrado-genfem-02.png)
 
-   O en forma tabular
-   ![Documentos en la colección en tabla](assets/documentos-en-coleccion-tabla.png)
+1. Obtener todos los usuarios que son menor de edad e indicar cuantos son.
 
-1. Como __MongoDB__ es una base de datos __NoSQL__ se pueden insertar documentos que no tengan la misma estructura y además cada campo puede ser un array o un objeto, así que se creará un documento donde el campo de la __CicloEstacion__ es un array conteniendo el número de la __CicloEstacion__, así como su geolocalización en longitud y latitud.
+   Del archivo `README` se obtiene que son todos los usuarios que en el campo `edad` tiene valor de 1, para realizar comparaciones en MongoDB los operadores son `$eq` (igual que), `$gt` (mayor que), `$gte` (mayor o igual que), `$lt` (menor que), `lte` (menor o igual que), aunque para este caso es suficiente con obtener todos los usuarios cuya edad sea 1, así que en la barra `FILTER` se escribe:
+   ```json
+   {edad: "1"}
+   ```
+   Notar que se ha colocado el valor de "1" encerrado entre comillas para indicar que es texto, ya que así es como está almacenada la información debido a la importación. El resultado obtenido es:
+   ![Usuarios menores de edad](assets/usuarios-menor-edad.png)
 
-   ![Agregando otro documento](assets/adicionando-datos-2.png)
-   Luego de precionar el botón __INSERT__ se obtiene la lista de los dos documentos insertados
+   Se obtiene un total de 222 usuarios.
 
-   ![Lista de documentos en la colección](assets/documentos-en-coleccion-2.png)
+1. Ahora vamos a mezclar las dos consultas anteriores, así que se desea obtener la lista de todos los usuarios menores de edad y con género femenino.
 
-1. Para modificar un documento, dar click sobre el botón __Edit Document__
+   Para realizar una operación `AND` en la barrá de `FILTER` se pueden colocar más de dos condiciones separadas por coma, así que la consulta queda como sigue:
+   ```json
+   {gen:"F", edad:"1"}
+   ```
+   El resultado es el siguiente:
+   ![Usuarios mujeres y menores de edad](assets/usuarios-menor-edad-mujeres.png)
 
-   ![Editar un documento](assets/editar-documento.png)
-   Después de dar click en el botón __Edit Document__ el documento cambia a estado editable y se puede modificar el contenido del documento, en este caso agregue los campo faltantes:
+   Por lo que se cuentan con 78 usuarios que cumplen ambas condiciones.
 
-   ![Modificando documento](assets/modificando-documento.png)
-   Agregar los datos faltantes que se muestran y dar click sobre el botón __UPDATE__ para guardar los cambios obteniendo la nueva lista de documentos
+1. Se desea obtener la lista de todos los usuarios cuya ocupación __no__ es _Estudiante_ o _Desempleado_ o _Otro_ y que además son menores de edad e indicar cuantos son.
 
-   ![Documentos en colección](assets/documentos-en-coleccion-3.png)
+   Primeramente del archivo `README` se obtiene que para _Estudiante_ y _Desempleado_ los códigos de ocupación son 0, 10 y 19 entonces se puede hacer uso del operador `$nin` (NOT IN) y el operador `AND` haciendo uso de la coma, quedando el filtro siguiente:
+   ```json
+   {ocup {$nin: ["0", "10", "19"]}, edad: "1"}
+   ```
+   El resultado sería el siguiente:
+   ![Usuarios con filtro](assets/usuarios-filtro-01.png)
 
-1. La operación para eliminar documentos se realiza mediante el botón __Delete Document__, pero primero crea un documento con sólo el campo de __Genero: M__ y luego procede a eliminarlo:
+   Por lo que se tienen sólo 20 usuarios que cumplen estas condiciones.   
 
-   ![Eliminando documento](assets/eliminando-documento.png)
-   Después de presionar el botón __Compass__ no muestra una advertencia de confirmación, dando click en el botón __DELETE__ para eliminar el documento de forma definitiva
-
-   ![Aceptando confirmación para eliminar](assets/eliminando-documento-confirmando.png)
+__Misión cumplida__

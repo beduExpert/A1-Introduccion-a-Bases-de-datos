@@ -1,25 +1,45 @@
-## Consultas Avanzadas
+[`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 04`](../Readme.md) > Postwork
+## Postwork
 
-### OBJETIVO
- - Fortalecer la capacidad de hacer preguntas perspicaces
- - Relacionar datos de diferentes tablas para ampliar nuestro espacio de preguntas
+### OBJETIVOS
+- Hacer consultas para filtrado de datos con SQL
+- Ordenar y guardar resultados con SQL
+- Hacer operaciones matemáticas con con SQL
+- Relacionar dos o más tablas con SQL
+- Obtener resultados útiles a partir de los datos por medio de consultas SQL.
 
-#### REQUISITOS
-1. MySQL Workbench
-2. BD MySQL
+### REQUISITOS
+1. __Git Bash__ instalado para equipos con Windows
+1. __Mycli__ instalado
+1. Datos de conexión al Servidor MariaDB o MySQL
+1. Carpeta de `Datos/` generado en el `Postwork` del la `Sesion-02`
+1. Carpeta de repositorio actualizada
 
-#### DESARROLLO
-Bienvenido al postwork de la sesión, este postwork es muy parecido al anterior. La idea es conseguir al menos dos tablas que se relacionan de alguna forma. Algunas veces vienen juntas en https://www.kaggle.com/datasets.  La dinámica es la misma que la anterior, pero ahora tenemos más datos y esto se pone más interesante.
+### DESARROLLO
+En esta sesión se hará uso de las dos o más tablas que tengas cargadas en tu base de datos, si no es el caso, puedes regresar a revisar el Postwork de la `Sesion-03` y realízalo para poder continuar.
 
-##### El script debe:
-* Busca algún dataset que te parezca interesante y cargalo sobre tu BD, te recomiendo buscar en https://www.kaggle.com/datasets
+1. Haz que tu carpeta de trabajo sea `Introduccion-a-Bases-de-Datos/Sesion-04/Postwork/`
+   ```console
+   $ cd Introduccion-a-Bases-de-Datos/Sesion-04/Postwork
+   Postwork $
+   ```
 
-* Después de revisar qué columnas trae tu BD y qué significan. Sin pensar en el SQL haz 5 preguntas que quizá podrías descubrir con los datos que tienes a la mano.
+1. Copiar la carpeta `Datos` creada en el `Sesion-03/Postwork/` y moverse a la carpeta `Datos/`
+   ```console
+   Postwork $ cp -a ../../Sesion-03/Postwork/Datos .
+   Postwork $ cd Datos
+   Datos $
+   ```
 
-* Escribe la consulta para cada pregunta, si no tienes la suficiente información piensa en otra pregunta.
+1. Realizar conexión al Servidor MariaDB/MySQL usando el comando `mycli` y los datos de conexión.
 
-* Busca al menos dos datasets relacionadas que te parezcan interesantes y cárgalos sobre tu BD, te recomiendo buscar en https://www.kaggle.com/datasets
+1. Para cada tabla en tu base de datos realiza el siguiente proceso:
+   - Analizar contenido de la tabla
+   - Determina si te es posible obtener resultados aplicando filtros y contando al contenido de la tabla, en caso afirmativo construye tus consultas SQL y obtén tus resultados.
+   - Además de contar registros también puedes realizar operaciones como suma, promedio, máximo o mínimo, determina si aplicando estas operaciones o funciones puedes obtener mejores resultados o simplemente diferentes para tu tabla.
+   - Si la tabla tiene un campo que haga referencia a otra tabla, entonces puedes pensar con obtener resultados con la información de ambas tablas, así que puedes usar la operación `JOIN` para relacionarlas.
+   - Si has realizado dos o más consultas en SQL para esta tabla, posiblemente sea una buena idea copiar y guardar tus consultas en un archivo de texto con extensión `.sql` para que automatices la ejecución de tus scripts.
 
-* Después de brevemente revisar los contenidos de tu BD, sin pensar en el SQL haz 5 preguntas que quizá podrías descubrir con los datos que tienes a la mano. Esta vez piensa de qué forma podrías extender tus preguntas tomando en cuenta la relación entre las tablas que tienes.
+__Meta:__ Toma en cuenta que tu objetivo es obtener resultados útiles a partir de los datos por medio de consultas SQL.
 
-* Escribe la consulta para cada pregunta, si no tienes la suficiente información piensa en otra pregunta.
+__Sugerencia:__ Si tienes problemas al realizar algunos de los pasos del procedimiento es buen momento para comentarlo con tu __Experta/o__ asignado para determinar la mejor solución.
