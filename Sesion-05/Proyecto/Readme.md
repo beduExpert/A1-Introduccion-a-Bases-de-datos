@@ -37,9 +37,6 @@ Se continúan creando consultas similares a las creadas en SQL pero aplicando la
    ```json
    {gen:"F", edad:"1"}
    ```
-   El resultado es el siguiente:
-   ![Usuarios mujeres y menores de edad](assets/usuarios-menor-edad-mujeres.png)
-
    Por lo que se cuentan con 78 usuarios que cumplen ambas condiciones.
 
 1. Se desea obtener la lista de todos los usuarios cuya ocupación __no__ es _Estudiante_ o _Desempleado_ o _Otro_ y que además son menores de edad e indicar cuantos son.
@@ -48,9 +45,6 @@ Se continúan creando consultas similares a las creadas en SQL pero aplicando la
    ```json
    {ocup {$nin: ["0", "10", "19"]}, edad: "1"}
    ```
-   El resultado sería el siguiente:
-   ![Usuarios con filtro](assets/usuarios-filtro-01.png)
-
    Por lo que se tienen sólo 20 usuarios que cumplen estas condiciones.   
 
 1. Como reto final, obtén la lista de todas las películas que se estrenaron en el año 2000 e indica cuantas son.
