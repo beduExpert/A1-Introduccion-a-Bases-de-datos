@@ -1,53 +1,58 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 06`](../Readme.md) > Reto-01
-## Consultando nuestra base de datos MongoDB
+## Realizando consultas usando expresiones regulares en MongoDB
 
 ### OBJETIVO
-- Que el alumno realice consultas básicas en MongoDB
+- Que el alumno aprenda como usar expresiones regulares en la creación de consultas.
+- Que el alumno responda a preguntas donde involucre búsqueda de cadenas de texto.
 
 ### REQUISITOS
 1. Repositorio actualizado
-1. Usar la carpeta de trabajo `Sesion-06/Reto-01`
-1. Contar con la base de datos __Ecobici__ y las colecciones __Clima__ y __Viajes__
+1. Contar con la base de datos __MiNombre__ y las colecciones __users__, __movies__ y __ratings__
 
 ### DESARROLLO
-1. Obtener la lista de todas las edades de los usuarios en la colección __Viajes__ realizados por una mujer y con edad mayor a 30 años en orden descendente.
+1. Imprimir la lista de películas cuya temática esté relacionada con _amor_ (love) de la colección `movies`.
 
-   En SQL el equivalente es `SELECT Edad_Usuario FROM Viajes WHERE Genero_Usuario="F" AND Edad_Usuario > 30 ORDER BY Edad_Usuario DESC`.
-
-   Para realizar la misma consulta en __Compass__ se hará uso de __Filter__
+   La primer aproximación es usar el siguiente filtro:
    ```json
-   {Genero_Usuario: "F", Edad_Usuario: { $gte: "30"}}
+   {titulo: /love/}
    ```
-   La coma hace la función de operador AND permitiendo aplicar dos operaciones
+   El resultado es:
+   ![Películas de amor](assets/regex-01.png)
 
-   de __Proyect__
+   Se obtienen 74 documentos que incluyen el texto `love` en su título, sin embargo para encontrar todas las películas con la temática de amor, habría que incluir el texto `loving` (amando), entonces el filtro quedará como:
    ```json
-   {Edad_Usuario: 1, __id: 0}
+   {titulo: /love|loving/i}
    ```
-   Recuerda que 1 indica que el campo presente y 0 no presente.
+   El resultado obtenido es el siguiente:
+   ![Películas de amor](assets/regex-02.png)
 
-   y de __Sort__
+   __Nota:__ Recuerda que puedes consultar la documentación sobre expresiones regulares en:
+   - https://www.w3schools.com/js/js_regexp.asp
+
+   En el resultado hay 75 documentos que tienen que ver con el tema de _amor_.
+
+1. Imprime la lista de todas las películas cuyo género sea horror, misterio o suspenso e indica cuantas son.
+
+   Una forma de solucionarlo es hacer uso de expresiones regulares junto con el operador `or` quedando el filtro como el siguiente:
+   ```js
+   {genres: /Horror|Mystery|Thriller/}
+   ```
+   El resultado obtenido es:
+   ![Películas de amor](assets/regex-03.png)
+
+   Se observar que las películas pertenecen a los géneros solicitados y en total son 611.
+
+1. Finalmente se desea imprimir la lista de todas la películas cuyo género sea comedia, drama o romance y cuya temática sea de amor.
+
+   La solución es una combinación de los dos casos anteriores, así que tendría que ocupar un operador `AND` en algún momento:
    ```json
-   {Edad_Usuario: -1}
+   {titulo: /love|loving/i, genres:/Comedy|Drama|Romance/}
    ```
-   Recuerda que 1 indica ascendente y -1 indica descendente
+   Dando el resultado:
+   ![Películas de acción de corazón](assets/regex-04.png)
 
-   Obteniendo un resultado similar a:
-   ![Resultado de consulta](assets/documentos-en-viajes-01.png)
+   En el resultado se puede comprobar como los documentos incluyen el texto `love` o `loving` y en el género en este el texto de `Comedy`
 
-1. Imprime la lista de todas las Bicis que fueron retiradas el `01/01/2018` de las ciclo estaciones 60 u 80.
+   El resultado da un total de 51 películas que cumplen con los criterios.
 
-   Nuevamente la solución requiere de hacer uso de __Filter__ con el operador __OR__ y __Proyect__
-
-   El __Filter__ queda de la siguiente manera:
-   ```json
-   {Fecha_Retiro: "01/01/2018", $or: [{Ciclo_Estacion_Retiro: "80"}, {Ciclo_Estacion_Retiro: "60"}]}
-   ```
-
-   El __Project__ queda así:
-   ```json
-   {Bici: 1, _id: 0}
-   ```
-
-   Y el resultado sería como el siguiente:
-   ![Resultado de consulta](assets/documentos-en-viajes-02.png)
+__Misión cumplida__
