@@ -1,15 +1,20 @@
 [`Fundamentos de Base de Datos`](../../Readme.md) > [`Sesión 06`](../Readme.md) > Proyecto
-## Calculando datos con MongoDB
+## Realizando consultas vinculando dos o más colecciones en MongoDB
 
 ### OBJETIVO
-- Que el alumno realice consultas con resultados calculados
+- Crear consultas que relaciones a dos o más tablas en MongoDB
+- Responder a preguntas que relacionen más de una fuente de información
+- Aplicar los conceptos de filtrado, orden, agrupación y funciones de MongoDB
 
 ### REQUISITOS
 1. Repositorio actualizado
-1. Usar la carpeta de trabajo `Sesion-06/Proyecto`
-1. Contar con la base de datos __Ecobici__ y la colección __Viajes__
+1. Contar con la base de datos __MiNombre__ y las colecciones __users__, __movies__ y __ratings__
+1. MongoDB Compass conectado al Servidor con los datos proporcionados para tu grupo
 
 ### DESARROLLO
+1. Imprime la lista de la 10 películas con mayor cantidad de valoraciones.
+
+
 1. Encontrar cuantos viajes se realizaron y cuál es la edad promedio de los ciclistas en la segunda mitad de enero 2018.
 
    La primera etapa es para agregar todas nuestras variables auxiliares como son __Edad__ (Edad_Usuario en tipo entero), __FechaRetiro__ (Fecha_Retiro en tipo fecha) y __Fecha__ (La constante "15/01/2018" en tipo fecha)
@@ -139,3 +144,50 @@
    ![Mujeres ciclistas etapa 7](assets/mujeres-ciclistas-e7.png)
 
    Y con esto se obtiene el porcentaje de ciclistas femeninos el 3 de enero del 2018.
+
+1. Imprime la lista de todos los usuarios con género femenino que dieron una valoración de 5 a la película con título "Deep Blue Sea" e indica cuantos son.
+
+   La solución se obtiene creando una relación entre las tres tablas de la siguiente forma:
+   ```sql
+   MiNombre> SELECT * FROM ratings LEFT JOIN movies ON movieid=movies.id LEFT JOIN users ON userid=users.id WHERE title LIKE "Deep Blue Sea%" AND rating=5 AND genero="F";
+   +----------+-----------+----------+--------------+------+----------------------+------------------------+------+----------+--------+--------+-------+
+   | userid   | movieid   | rating   | time_stamp   | id   | title                | genres                 | id   | genero   | edad   | ocup   | cp    |
+   |----------+-----------+----------+--------------+------+----------------------+------------------------+------+----------+--------+--------+-------|
+   | 210      | 2722      | 5        | 977100602    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 210  | F        | 1      | 10     | 25801 |
+   | 372      | 2722      | 5        | 980449576    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 372  | F        | 18     | 4      | 72227 |
+   | 1125     | 2722      | 5        | 974924805    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 1125 | F        | 18     | 4      | 53715 |
+   | 2138     | 2722      | 5        | 974638653    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 2138 | F        | 18     | 4      | 88119 |
+   | 2907     | 2722      | 5        | 971821556    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 2907 | F        | 35     | 5      | 12345 |
+   | 3202     | 2722      | 5        | 968573704    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 3202 | F        | 18     | 4      | 24060 |
+   | 3483     | 2722      | 5        | 967494828    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 3483 | F        | 45     | 7      | 30260 |
+   | 4278     | 2722      | 5        | 965289897    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 4278 | F        | 45     | 7      | 09094 |
+   | 4504     | 2722      | 5        | 965011706    | 2722 | Deep Blue Sea (1999) |
+   :
+   ```
+   __Nota:__ Se recomienda ir construyendo la consulta paso a paso e ir observando los resultados generados.
+
+   Observar como el resultado incluye la lista de todas las columnas de todas las tablas, así que si sólo se desea la lista de usuario, entonces sólo se incluirá los campos de la tabla `users`:
+   ```sql
+   MiNombre> SELECT users.* FROM ratings LEFT JOIN movies ON movieid=movies.id LEFT JOIN users ON userid=users.id WHERE title LIKE "Deep Blue Sea%" AND rating=5 AND genero="F";
+   +------+----------+--------+--------+-------+
+   | id   | genero   | edad   | ocup   | cp    |
+   |------+----------+--------+--------+-------|
+   | 210  | F        | 1      | 10     | 25801 |
+   | 372  | F        | 18     | 4      | 72227 |
+   | 1125 | F        | 18     | 4      | 53715 |
+   | 2138 | F        | 18     | 4      | 88119 |
+   | 2907 | F        | 35     | 5      | 12345 |
+   | 3202 | F        | 18     | 4      | 24060 |
+   | 3483 | F        | 45     | 7      | 30260 |
+   | 4278 | F        | 45     | 7      | 09094 |
+   | 4504 | F        | 25     | 0      | 65775 |
+   | 5103 | F        | 35     | 16     | 78222 |
+   +------+----------+--------+--------+-------+
+
+   10 rows in set
+   Time: 0.763s
+   MiNombre>  
+   ```
+   Con el uso de `users.*` se está indicando que se incluyan sólo todos los campos de la tabla `users`.
+
+   Con lo que se obtiene la lista de los usuarios solicitada con un total de 10 registros, haciendo uso de una sola consulta y no en varios pasos como se realizó usando archivos csv.
