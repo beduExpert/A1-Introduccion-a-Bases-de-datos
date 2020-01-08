@@ -14,180 +14,109 @@
 ### DESARROLLO
 1. Imprime la lista de la 10 películas con mayor cantidad de valoraciones.
 
-
-1. Encontrar cuantos viajes se realizaron y cuál es la edad promedio de los ciclistas en la segunda mitad de enero 2018.
-
-   La primera etapa es para agregar todas nuestras variables auxiliares como son __Edad__ (Edad_Usuario en tipo entero), __FechaRetiro__ (Fecha_Retiro en tipo fecha) y __Fecha__ (La constante "15/01/2018" en tipo fecha)
-   ```json
-   {
-     Edad: {$toInt: "$Edad_Usuario"},
-     FechaRetiro: {
-       $dateFromString: {dateFromString:"$Fecha_Retiro", format:"%d/%m/%Y"}
-     },
-     Fecha: {$dateFromString: {dateFromString:"15/01/2018", format:"%d/%m/%Y"}}
-   }
+   Lo primero es usar la colección __ratings__ para agrupar y contar el número de valoraciones por cada película usando una agregación `group` con:
    ```
-   Para ver una lista de las operaciones disponibles [ver aquí](https://docs.mongodb.com/manual/reference/operator/aggregation/)
-
-   El resultado es como el siguiente:
-   ![Resultado etapa 1](assets/resultados-etapa-1.png)
-
-   La segunda etapa es para obtener todos los ciclistas de la segunda mitad de enero 2018 haciendo uso de __$match__, __$expr__ y __$gte__:
-   ```json
    {
-     $expr: {
-       $gte: ["$FechaRetiro", "$Fecha"]
-     }
-   }
-   ```
-
-   La etapa final es para obtener la edad promedio de los ciclistas haciendo uso de __$group__ y __$avg__:
-   ```json
-   {
-     _id: null,
-     Edad_Promedio: {
-       $avg: "$Edad"
-     }
-   }
-   ```
-
-   El resultado final será:
-   ![Resultado etapa 3](assets/resultados-etapa-3.png)
-
-1. Obtener el porcentaje de ciclistas mujeres que usaron el servicio el 3 de enero del 2018.
-
-   La primera etapa es reducir los ciclistas al 3 de enero del 2018 usando __$match__:
-   ```json
-   {
-     Fecha_Retiro: /^03/
-   }
-   ```
-   ![Mujeres ciclistas etapa 1](assets/mujeres-ciclistas-e1.png)
-
-   La segunda etapa se obtiene el total de ciclistas y se crean variables auxiliares para las siguientes etapas usando __$group__, __$sum__ y __$push__:
-   ```json
-   {
-     _id: null,
-     ciclistas: {
-       $sum: 1
-     },
-     viajes: {
-       $push: {
-         genero: "$Genero_Usuario"
-       }
-     }
-   }
-   ```
-   ![Mujeres ciclistas etapa 2](assets/mujeres-ciclistas-e2.png)
-
-   En la tercera etapa se emparejan los campos __id__ y __ciclistas__ a lo largo de todo el arreglo __viajes__ usando __$unwind__:
-   ```json
-   {
-     path: "$viajes"
-   }
-   ```
-   ![Mujeres ciclistas etapa 3](assets/mujeres-ciclistas-e3.png)
-
-   Con esto cada elemento de nuestra colección tendrá 3 campos, __id__, __ciclistas__ y __viajes.genero__.
-
-   En la cuarta etapa con __$project__ se crea el campo __genero__ para usarlo en la quinta etapa con __$match__ para obtener todos los documentos con genero femenino:
-
-   Para el __$project__:
-   ```json
-   {
-     genero: "$viajes.genero",
-     ciclistas: 1
-   }
-   ```
-   ![Mujeres ciclistas etapa 4](assets/mujeres-ciclistas-e4.png)
-
-   Para el __$match__:
-   ```json
-   {
-     genero: "F"
-   }
-   ```
-   ![Mujeres ciclistas etapa 5](assets/mujeres-ciclistas-e5.png)
-
-   En la sexta etapa se cuentan cuantos documentos quedaron dando lugar a la creación del campo __cifem__ que es el número de ciclistas femeninos y además se agrega el campo __ciclistas__ haciendo uso de cualquier operación que regrese el valor del campo, por ejemplo usando __$min__.
-   ```json
-   {
-     _id: null,
-     ciclistas: {
-       $min: "$ciclistas"
-     },
-     cifem: {
+     _id: "$movieid",
+     num_ratings: {
        $sum: 1
      }
    }
    ```
-   ![Mujeres ciclistas etapa 6](assets/mujeres-ciclistas-e6.png)
+   Obteniendo el resultado:
+   ![Resultado etapa group](assets/10peliculas-01.png)
+   Así que ahora se sabe cuantas valoraciones ha tenido cada película.
 
-   Con esto se obtiene un sólo documento con dos campos.
+   Entonces ahora se ordena en forma descendente y se obtienen sólo los primeros 10 documentos usando las agregaciones `sort` y `limit` obteniendo el resultado:
+   ![Resultado etapas sort y limit](assets/10peliculas-02.png)
 
-   En la última etapa, sólo resta calcular el porcentaje haciendo uso de __$project__ para crear un nuevo campo llamado __porcentaje__:
-   ```json
+   Con el resultado anterior se tiene la lista de las 10 películas con más número de valoraciones, ahora sólo falta agregar el título haciendo uso de la agregación `lookup` con los siguiente parámetros:
+   ```
    {
-     porcentaje: {
-       $multiply: [
-          {
-            $divide: [
-              "$cifem",
-              "$ciclistas"
-            ]
-          },
-          100
-       ]
-     }
+     from: "movies",
+     localField: "_id",
+     foreignField: "id",
+     as: "movie"
    }
    ```
-   ![Mujeres ciclistas etapa 7](assets/mujeres-ciclistas-e7.png)
+   El resultado obtenido es:
+   ![Resultado etapa lookup](assets/10peliculas-03.png)
 
-   Y con esto se obtiene el porcentaje de ciclistas femeninos el 3 de enero del 2018.
+   Ahora ya se tienen todos los datos de cada una de las 10 películas, pero si sólo se requiere del `_id`, `titulo` y `num_ratings` se puede usar otra etapa con `project` con la siguiente configuración:
+   ```
+   {
+     _id: 1,
+     titulo: {$arrayElemAt: ["$movie.titulo", 0]},
+     num_ratings: "$num_ratings"
+   }
+   ```
+   El resultado es el siguiente:
+   ![Resultado etapa project](assets/10peliculas-04.png)
+
+   Haciendo uso de `project` se han definido los campos a mostrar y en el orden deseado.
+
+   Finalmente se puede guardar toda la agregación como una vista y mostrar los resultados de forma tabular
+   ![Resultado en una vista tabular](assets/10peliculas-05.png)
+
+   Pero ¿serán las películas con mejor o peor valoración?
 
 1. Imprime la lista de todos los usuarios con género femenino que dieron una valoración de 5 a la película con título "Deep Blue Sea" e indica cuantos son.
 
-   La solución se obtiene creando una relación entre las tres tablas de la siguiente forma:
-   ```sql
-   MiNombre> SELECT * FROM ratings LEFT JOIN movies ON movieid=movies.id LEFT JOIN users ON userid=users.id WHERE title LIKE "Deep Blue Sea%" AND rating=5 AND genero="F";
-   +----------+-----------+----------+--------------+------+----------------------+------------------------+------+----------+--------+--------+-------+
-   | userid   | movieid   | rating   | time_stamp   | id   | title                | genres                 | id   | genero   | edad   | ocup   | cp    |
-   |----------+-----------+----------+--------------+------+----------------------+------------------------+------+----------+--------+--------+-------|
-   | 210      | 2722      | 5        | 977100602    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 210  | F        | 1      | 10     | 25801 |
-   | 372      | 2722      | 5        | 980449576    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 372  | F        | 18     | 4      | 72227 |
-   | 1125     | 2722      | 5        | 974924805    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 1125 | F        | 18     | 4      | 53715 |
-   | 2138     | 2722      | 5        | 974638653    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 2138 | F        | 18     | 4      | 88119 |
-   | 2907     | 2722      | 5        | 971821556    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 2907 | F        | 35     | 5      | 12345 |
-   | 3202     | 2722      | 5        | 968573704    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 3202 | F        | 18     | 4      | 24060 |
-   | 3483     | 2722      | 5        | 967494828    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 3483 | F        | 45     | 7      | 30260 |
-   | 4278     | 2722      | 5        | 965289897    | 2722 | Deep Blue Sea (1999) | Action|Sci-Fi|Thriller | 4278 | F        | 45     | 7      | 09094 |
-   | 4504     | 2722      | 5        | 965011706    | 2722 | Deep Blue Sea (1999) |
-   :
+   La solución se puede obtener de varias formas, pero se puede comenzar con la colección __movies__ para encontrar el `id` de la película con título "Deep Blue Sea" usando agregaciones con una etapa `match`:
    ```
-   __Nota:__ Se recomienda ir construyendo la consulta paso a paso e ir observando los resultados generados.
-
-   Observar como el resultado incluye la lista de todas las columnas de todas las tablas, así que si sólo se desea la lista de usuario, entonces sólo se incluirá los campos de la tabla `users`:
-   ```sql
-   MiNombre> SELECT users.* FROM ratings LEFT JOIN movies ON movieid=movies.id LEFT JOIN users ON userid=users.id WHERE title LIKE "Deep Blue Sea%" AND rating=5 AND genero="F";
-   +------+----------+--------+--------+-------+
-   | id   | genero   | edad   | ocup   | cp    |
-   |------+----------+--------+--------+-------|
-   | 210  | F        | 1      | 10     | 25801 |
-   | 372  | F        | 18     | 4      | 72227 |
-   | 1125 | F        | 18     | 4      | 53715 |
-   | 2138 | F        | 18     | 4      | 88119 |
-   | 2907 | F        | 35     | 5      | 12345 |
-   | 3202 | F        | 18     | 4      | 24060 |
-   | 3483 | F        | 45     | 7      | 30260 |
-   | 4278 | F        | 45     | 7      | 09094 |
-   | 4504 | F        | 25     | 0      | 65775 |
-   | 5103 | F        | 35     | 16     | 78222 |
-   +------+----------+--------+--------+-------+
-
-   10 rows in set
-   Time: 0.763s
-   MiNombre>  
+   {
+     titulo: /Deep Blue Sea/
+   }
    ```
-   Con el uso de `users.*` se está indicando que se incluyan sólo todos los campos de la tabla `users`.
+   Después se obtiene la lista de todas las valoraciones (ratings) que corresponden a esta película usando otra etapa con `lookup`:
+   ```
+   {
+     from: "ratings",
+     localField: "id",
+     foreignField: "movieid",
+     as: "ratings"
+   }
+   ```
+   El resultado crea el campo `ratings` que es un arreglo con todas las valoraciones realizadas para esta película, pero se desea que crear un documento nuevo por cada elemento en el array, así que se hace uso de una etapa con `unwind` con:
+   ```
+   {
+     path: "$ratings"
+   }
+   ```
+   Así que ahora usa otra etapa con `match` para seleccionar sólo los documentos cuya valoración tiene un valor de 5:
+   ```
+   {
+     "ratings.ratings": "5"
+   }
+   ```
+   Ahora se necesita la información del género que está en la colección __users__, entonces se usa otra etapa con `lookup`:
+   ```
+   {
+     from: "users",
+     localField: "ratings.userid",
+     foreignField: "id",
+     as: "user"
+   }
+   ```
+   Esto no agrega el campo `user` con todos los datos del usuario, así que ahora sólo hay que seleccionar lo que tiene género femenino con otra etapa:
+   ```
+   {
+     "user.gen": "F"
+   }
+   ```
+   Y finalmente para obtener un resultado más ordenado se usa una etapa más con `project` para seleccionar los datos a mostrar:
+   ```
+   {
+     _id: 0,
+     id: {$arrayElemAt: ["$user.id", 0]},
+     gen: {$arrayElemAt: ["$user.gen", 0]},
+     edad: {$arrayElemAt: ["$user.edad", 0]},
+     ocup: {$arrayElemAt: ["$user.ocup", 0]},
+   }
+   ```
+   Obteniendo el resultado siguiente:
+   ![Resultado de la etapa project](assets/usuarios-01.png)
 
-   Con lo que se obtiene la lista de los usuarios solicitada con un total de 10 registros, haciendo uso de una sola consulta y no en varios pasos como se realizó usando archivos csv.
+   Con lo que se obtiene la lista de los usuarios solicitada con un total de 10 registros, posiblemente esto sea un poco más complejo que en SQL, pero estamos haciendo consultas a datos estructurados donde es el fuerte de SQL.
+
+__Misión cumplida__
